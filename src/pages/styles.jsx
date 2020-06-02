@@ -55,10 +55,15 @@ code {
 
 export const Container = styled.div`
   width: 100%;
-
   max-width: 1366px;
-
   margin: 0 auto;
+
+  .content-center-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
   h3 {
     font-size: 12px;

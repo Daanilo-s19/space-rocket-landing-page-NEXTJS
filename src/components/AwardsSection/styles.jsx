@@ -10,19 +10,16 @@ export const Section = styled.section`
 
   .content-header {
     display: grid;
-    grid-template-columns: 155px 1fr 2fr 155px;
+    grid-template-columns: 155px 1.5fr 2fr 155px;
 
     .title {
       grid-column: 2/3;
       max-width: 427px;
     }
     .border {
-      /* width: 100%; */
-
       align-self: center;
       img {
         width: 100%;
-        /* max-width: 10px; */
       }
     }
   }

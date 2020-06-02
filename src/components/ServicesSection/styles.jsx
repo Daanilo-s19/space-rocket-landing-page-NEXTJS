@@ -8,12 +8,6 @@ export const Section = styled.section`
   gap: 56px;
   margin: 143px 0 181px;
 
-  .content-header-services {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
   .content-item {
     grid-row: 2/3;
     display: grid;

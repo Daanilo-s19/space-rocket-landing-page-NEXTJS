@@ -3,7 +3,7 @@ import { ItemService, Section } from "./styles";
 export default function ServicesSection() {
   return (
     <Section>
-      <div className="content-header-services">
+      <div className="content-center-header">
         <h3>serviços</h3>
         <h4>A solução ideal para o seu negócio digital</h4>
       </div>
