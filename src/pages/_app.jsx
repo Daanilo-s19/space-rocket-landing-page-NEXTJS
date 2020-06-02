@@ -2,7 +2,7 @@ import App from "next/app";
 import Head from "next/head";
 // import ParticlesBackGround from "../components/Particles";
 import { ThemeProvider } from "styled-components";
-import { GlobalStyle, Container, theme } from "./styles";
+import { GlobalStyle, Container, theme } from "../../styles";
 
 export default class MyApp extends App {
   render() {
