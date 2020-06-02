@@ -30,8 +30,8 @@ li {
 }
 html,
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   scroll-behavior: smooth;
 }
 body {
@@ -55,9 +55,23 @@ code {
 
 export const Container = styled.div`
   width: 100%;
-  height: 100%;
+
   max-width: 1366px;
 
   margin: 0 auto;
+
+  h3 {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: ${({ theme }) => theme.colors.primary};
+    margin-bottom: 10px;
+  }
+  h4 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+  }
   /* background: blue; */
 `;

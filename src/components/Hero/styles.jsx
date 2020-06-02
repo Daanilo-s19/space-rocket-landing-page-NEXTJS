@@ -18,7 +18,7 @@ export const Header = styled.header`
   }
   h2 {
     width: 100%;
-    max-width: 824px; /*TODO */
+    width: 624px;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;

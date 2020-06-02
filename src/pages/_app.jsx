@@ -1,6 +1,6 @@
 import App from "next/app";
 import Head from "next/head";
-import ParticlesBackGround from "../components/Particles";
+// import ParticlesBackGround from "../components/Particles";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle, Container, theme } from "./styles";
 
@@ -24,7 +24,7 @@ export default class MyApp extends App {
         </Head>
         <Container>
           <GlobalStyle />
-          <ParticlesBackGround style={{ top: "0", left: "0" }} />
+          {/* <ParticlesBackGround style={{ top: "0", left: "0" }} /> */}
           <Component {...pageProps} />
         </Container>
       </ThemeProvider>
