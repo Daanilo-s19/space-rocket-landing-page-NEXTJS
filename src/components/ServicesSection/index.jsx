@@ -2,16 +2,16 @@ import { ItemService, Section } from "./styles";
 
 export default function ServicesSection() {
   return (
-    <Section>
+    <>
       <div className="content-center-header">
         <h3>serviços</h3>
         <h4>A solução ideal para o seu negócio digital</h4>
       </div>
-      <div className="content-item">
-        <div className="content-alignment-grid">
+      <Section>
+        <div className="content-item">
           {" "}
           <ItemService>
-            <img src="assets/union.svg" />
+            <img src="assets/Union.svg" />
             <strong>Aplicativos</strong>
             <span>
               Construímos aplicativos personalizados para seu empreendimento,
@@ -19,7 +19,7 @@ export default function ServicesSection() {
             </span>
           </ItemService>{" "}
           <ItemService>
-            <img src="assets/union.svg" />
+            <img src="assets/Union.svg" />
             <strong>Aplicativos</strong>
             <span>
               Construímos aplicativos personalizados para seu empreendimento,
@@ -27,7 +27,7 @@ export default function ServicesSection() {
             </span>
           </ItemService>{" "}
           <ItemService>
-            <img src="assets/union.svg" />
+            <img src="assets/Union.svg" />
             <strong>Aplicativos</strong>
             <span>
               Construímos aplicativos personalizados para seu empreendimento,
@@ -35,7 +35,7 @@ export default function ServicesSection() {
             </span>
           </ItemService>
         </div>
-      </div>
-    </Section>
+      </Section>
+    </>
   );
 }

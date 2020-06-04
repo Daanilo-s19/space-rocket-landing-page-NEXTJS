@@ -23,6 +23,7 @@ export const GlobalStyle = createGlobalStyle`
   font: inherit;
   vertical-align: baseline;
   outline: none;
+  box-sizing: border-box;
 }
 ul,
 li {
@@ -63,6 +64,8 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 143px;
+    text-align: center;
   }
 
   h3 {

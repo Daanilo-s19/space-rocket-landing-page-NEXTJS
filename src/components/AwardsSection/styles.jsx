@@ -42,7 +42,7 @@ export const Section = styled.section`
 export const Item = styled.div`
   width: 96px;
   height: 96px;
-  background: url("assets/ellipse.svg") bottom border-box no-repeat;
+  background: url("assets/Ellipse.svg") bottom border-box no-repeat;
 
   .circle {
     width: 100%;

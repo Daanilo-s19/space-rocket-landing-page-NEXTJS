@@ -2,23 +2,16 @@ import styled from "styled-components";
 
 export const Section = styled.section`
   display: grid;
-  width: 100%;
 
-  grid-template-rows: auto 1fr;
-  gap: 56px;
-  margin: 143px 0 181px;
+  display: grid;
+  grid-template-columns: minmax(auto, 155px) 1fr minmax(auto, 155px);
+  margin: 56px 0 181px;
 
   .content-item {
-    grid-row: 2/3;
+    grid-column: 2/3;
     display: grid;
-    grid-template-columns: 155px 1fr 155px;
-
-    .content-alignment-grid {
-      grid-column: 2/3;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      column-gap: 36px;
-    }
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 36px;
   }
 `;
 
