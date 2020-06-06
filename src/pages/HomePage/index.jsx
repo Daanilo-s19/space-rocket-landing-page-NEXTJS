@@ -7,6 +7,7 @@ import MethodSection from "../../components/methodSection";
 import useI18n from "../../hooks/use-i18n";
 import en from "../../locales/en.json";
 import pt from "../../locales/pt.json";
+import CasesSection from "../../components/casesSection";
 
 export default function Home() {
   const i18n = useI18n();
@@ -29,6 +30,7 @@ export default function Home() {
       <AwardsSection />
       <ServicesSection />
       <MethodSection />
+      <CasesSection cases={[0, 1, 2]} />
     </>
   );
 }
