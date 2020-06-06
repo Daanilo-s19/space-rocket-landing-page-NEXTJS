@@ -8,7 +8,7 @@ const Title = styled.h1`
 export default function Home() {
   return (
     <Link href="/HomePage">
-      <Title>My page</Title>
+      <Title>Carregando... *clique pra ir para home*</Title>
     </Link>
   );
 }

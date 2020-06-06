@@ -3,21 +3,20 @@ import PropTypes from "prop-types";
 import { Header } from "./styles";
 
 export default function Hero(props) {
+  const { title, subtitle, textButton } = props;
   return (
     <Header>
-      <h1>Criamos, desenvolvemos e gerenciamos produtos digitais.</h1>
-      <h2>
-        Impulsionamos seu negócio através da tecnologia, desenvolvendo soluções
-        digitais exclusivas para seu empreendimento.
-      </h2>
+      <h1>{title}</h1>
+      <h2>{subtitle}</h2>
       <Button bgColor="#552EE5" childrenColor="#F0F4FA" shadow={true}>
-        Comece um projeto
+        {textButton}
       </Button>
     </Header>
   );
 }
 
-// Hero.propTypes = {
-//   title: PropTypes.string.isRequired,
-//   Subtitle: PropTypes.string.isRequired,
-// };
+Hero.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  textButton: PropTypes.string.isRequired,
+};

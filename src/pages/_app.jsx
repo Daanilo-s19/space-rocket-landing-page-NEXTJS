@@ -1,8 +1,8 @@
 import App from "next/app";
 import Head from "next/head";
-// import ParticlesBackGround from "../components/Particles";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle, Container, theme } from "../../styles";
+import I18n from "../lib/i18n";
 
 export default class MyApp extends App {
   render() {
@@ -24,8 +24,9 @@ export default class MyApp extends App {
         </Head>
         <Container>
           <GlobalStyle />
-          {/* <ParticlesBackGround style={{ top: "0", left: "0" }} /> */}
-          <Component {...pageProps} />
+          <I18n lngDict={pageProps.lngDict} locale={pageProps.lng}>
+            <Component {...pageProps} />
+          </I18n>
         </Container>
       </ThemeProvider>
     );
