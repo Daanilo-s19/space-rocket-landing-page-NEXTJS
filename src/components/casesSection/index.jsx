@@ -1,4 +1,5 @@
 import { Cases, AllCases } from "./styles";
+import AboutMore from "../AboutMore";
 
 export default function CasesSection(props) {
   const { cases } = props;
@@ -27,10 +28,7 @@ export default function CasesSection(props) {
                 prêmio Correio de Futuro do ano 2019.
               </span>
             </div>
-            <div className="more-information">
-              <label>mais informações</label>
-              <img src="assets/case_more_information.svg" />
-            </div>
+            <AboutMore title=" Mais Informações" />
           </div>
         </Cases>
       ))}

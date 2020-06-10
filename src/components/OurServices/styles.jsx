@@ -1,19 +1,19 @@
 import styled from "styled-components";
 
-export const Section = styled.section`
-  display: grid;
+// export const Section = styled.section`
+//   display: grid;
 
-  display: grid;
-  grid-template-columns: minmax(auto, 155px) 1fr minmax(auto, 155px);
-  margin: 56px 0 181px;
+//   display: grid;
+//   grid-template-columns: minmax(auto, 155px) 1fr minmax(auto, 155px);
+//   margin: 56px 0 181px;
 
-  .content-item {
-    grid-column: 2/3;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 36px;
-  }
-`;
+//   .content-item {
+//     grid-column: 2/3;
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     column-gap: 36px;
+//   }
+// `;
 
 export const ItemService = styled.div`
   display: flex;
