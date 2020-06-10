@@ -6,6 +6,7 @@ export const Header = styled.header`
   flex-direction: column;
   align-items: center;
   margin-top: 88px;
+  background: url("assets/filter_space.svg");
 
   h1 {
     width: 100%;

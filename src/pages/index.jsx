@@ -1,19 +1,26 @@
 import styled from "styled-components";
+import Router from "next/router";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    setTimeout(() => {
+      Router.push("/HomePage");
+    }, 3000);
+  }, []);
   return (
     <>
       <Content>
         <img src="assets/line_top_splash.svg" id="line-top" />
         <div id="logo">
           <img src="assets/space_rocket_logo_splash.svg" />
-          <label>site em construção</label>
+          <label>Carregando...</label>
         </div>
         <img src="assets/line_bottom_splash.svg" id="line-bottom" />
         <div className="footer">
           <div className="social-media">
             <a href="/">
-              <img src="assets/twitter.svg" />
+              <img src="assets/whatsapp.svg" />
             </a>
             <a href="/">
               <img src="assets/instagram.svg" />
@@ -39,7 +46,7 @@ export default function Home() {
     </>
   );
 }
-// mEDIA QUERIE A PARTIR DE 500
+// MEDIA QUERIE A PARTIR DE 500
 const Content = styled.div`
   width: 100%;
   padding: 88px 0;

@@ -57,7 +57,65 @@ export default function Home() {
         ]}
       />
       <PressSection />
-      <BlogSection blog={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]} />
+      <BlogSection
+        blog={[
+          [
+            {
+              tag: " freelancer",
+              title:
+                "Propostas para Freelancers: como montar e como gerenciar?",
+              description:
+                "Muitos Freelancers possuem muita dificuldade em precificar projetos e montar propostas. Além disso, o tempo para montar uma boa proposta",
+            },
+            {
+              tag: " tag 2",
+              title: "titulo 2",
+              description:
+                "Muitos Freelancers possuem muita dificuldade em precificar projetos e montar propostas. Além disso, o tempo para montar uma boa proposta",
+            },
+            {
+              tag: " tag 3",
+              title: "titulo 3",
+              description:
+                "Muitos Freelancers possuem muita dificuldade em precificar projetos e montar propostas. Além disso, o tempo para montar uma boa proposta",
+            },
+          ],
+          [
+            {
+              tag: " tag4",
+              title: "titulo4",
+              description:
+                "Muitos Freelancers possuem muita dificuldade em precificar projetos e montar propostas. Além disso, o tempo para montar uma boa proposta",
+            },
+            {
+              tag: " tag 5",
+              title: "titulo 5",
+              description:
+                "Muitos Freelancers possuem muita dificuldade em precificar projetos e montar propostas. Além disso, o tempo para montar uma boa proposta",
+            },
+            {
+              tag: " tag 6",
+              title: "titulo 6",
+              description:
+                "Muitos Freelancers possuem muita dificuldade em precificar projetos e montar propostas. Além disso, o tempo para montar uma boa proposta",
+            },
+          ],
+          [
+            {
+              tag: " tag 7",
+              title: "titulo 7",
+              description:
+                "Muitos Freelancers possuem muita dificuldade em precificar projetos e montar propostas. Além disso, o tempo para montar uma boa proposta",
+            },
+            {
+              tag: " tag 8",
+              title: "titulo 8",
+              description:
+                "Muitos Freelancers possuem muita dificuldade em precificar projetos e montar propostas. Além disso, o tempo para montar uma boa proposta",
+            },
+          ],
+        ]}
+      />
     </>
   );
 }

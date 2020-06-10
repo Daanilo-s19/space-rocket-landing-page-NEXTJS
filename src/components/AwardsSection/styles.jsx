@@ -7,6 +7,7 @@ export const Section = styled.section`
   grid-template-rows: auto 1fr;
   gap: 56px;
   margin: 143px 0 181px;
+  background: url("assets/filter_space.svg");
 
   .content-header {
     display: grid;

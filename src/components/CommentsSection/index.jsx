@@ -14,9 +14,6 @@ export default function CommentsSection(props) {
       </div>
       <Section>
         {comments.map((item, index) => {
-          setTimeout(() => {
-            setController(controller + 1);
-          }, 5000);
           return (
             controller % comments.length === index && (
               <div className="comments">
@@ -35,6 +32,7 @@ export default function CommentsSection(props) {
         <CarouselController
           index={(controller % comments.length) + 1}
           totalItem={comments.length}
+          item={comments}
           back={() => setController(controller - 1)}
           skip={() => setController(controller + 1)}
         />

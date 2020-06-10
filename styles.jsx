@@ -54,6 +54,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #fff;
   font-size:16px;
+  
 }
 
 code {
@@ -67,6 +68,11 @@ export const Container = styled.div`
   width: 100%;
   max-width: 1366px;
   margin: 0 auto;
+  background: url("assets/filter_space.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
 
   .content-center-header {
     display: flex;

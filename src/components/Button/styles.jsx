@@ -5,6 +5,7 @@ export const ButtonDefault = styled.button`
   max-width: 192px;
   height: 44px;
   border-radius: 100px;
+  padding: 13px 0 14px;
   border: ${(props) =>
     props.background
       ? props.background

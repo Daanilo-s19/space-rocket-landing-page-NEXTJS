@@ -8,6 +8,22 @@ export const Carousel = styled.div`
   .view-controller {
     display: flex;
     align-items: center;
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.3);
+      margin-right: 8px;
+      border-radius: 50%;
+    }
+    .dot-selected {
+      width: 36px;
+      height: 6px;
+      margin-right: 8px;
+      background: ${({ theme }) => theme.colors.primary};
+      border-radius: 100px;
+    }
+
     span {
       font-size: 12px;
       line-height: 14px;

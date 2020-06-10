@@ -11,35 +11,32 @@ export default function BlogSection(props) {
   return (
     <>
       <SectionDefault title="Blog" subtitle="Últimos Artigos">
-        {blog.map((item, index) => {
+        {blog.map((list, index) => {
           return (
-            controller * index === controller && (
+            controller % blog.length === index &&
+            list.map((element, index) => (
               <ItemBlog>
                 <div className="content-image">
-                  <div className="tag">freelancer</div>
+                  <div className="tag">{element.tag}</div>
                 </div>
                 <div className="content">
-                  <label>
-                    Propostas para Freelancers: como montar e como gerenciar?
-                  </label>
-                  <p>
-                    Muitos Freelancers possuem muita dificuldade em precificar
-                    projetos e montar propostas. Além disso, o tempo para montar
-                    uma boa proposta
-                  </p>
+                  <label>{element.title}</label>
+                  <p>{element.description}</p>
                   <AboutMore title="Ler Mais" />
                 </div>
               </ItemBlog>
-            )
+            ))
           );
         })}
       </SectionDefault>
       <Content>
         <CarouselController
-          index={(controller % blog.length) / 3 + 1}
-          totalItem={blog.length / 3}
-          back={() => setController(controller - 3)}
-          skip={() => setController(controller + 3)}
+          dots={true}
+          index={(controller % blog.length) + 1}
+          totalItem={blog.length}
+          item={blog}
+          back={() => setController(controller - 1)}
+          skip={() => setController(controller + 1)}
         />
       </Content>
     </>
