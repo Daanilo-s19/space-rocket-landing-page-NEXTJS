@@ -11,6 +11,15 @@ export const theme = {
     secundary: "#161041",
     // third: "linear-gradient(40.72deg, #552EE5 14.56%, #EE5A59 85.55%);",
   },
+  breakpoint: {
+    mobileS: "(max-width: 320px)",
+    mobileM: "(max-width: 375px)",
+    mobileL: "(max-width: 425px)",
+    tablet: "(max-width: 768px)",
+    laptop: "(max-width: 1024px)",
+    laptopL: "(max-width: 1440px)",
+    desktop: "(max-width: 2560px)",
+  },
 };
 
 export const GlobalStyle = createGlobalStyle`

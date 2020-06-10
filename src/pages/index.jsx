@@ -39,7 +39,7 @@ export default function Home() {
     </>
   );
 }
-
+// mEDIA QUERIE A PARTIR DE 500
 const Content = styled.div`
   width: 100%;
   padding: 88px 0;
@@ -120,6 +120,26 @@ const Content = styled.div`
           border: 1px solid rgba(255, 255, 255, 1);
         }
       }
+    }
+  }
+  @media ${({ theme }) => theme.breakpoint.mobileL} {
+    #line-top {
+      margin-left: 0;
+    }
+    #line-bottom {
+      margin: 0;
+    }
+    #logo {
+      img {
+        width: 80%;
+      }
+      label {
+        margin: -10px 0 59px 100px;
+        font-size: 12px;
+      }
+    }
+    .footer {
+      margin: 0 auto;
     }
   }
 `;
