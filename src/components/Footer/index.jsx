@@ -2,6 +2,7 @@ import SocialMedia from "../SocialMedia";
 import { Footerdefault, BorderTop } from "./styles";
 
 export default function Footer(props) {
+  const { item, designer, tag } = props;
   return (
     <>
       <BorderTop>
@@ -13,20 +14,18 @@ export default function Footer(props) {
           <div className="content">
             <SocialMedia />
             <div className="content-menu">
-              <a>Cases</a>
-              <a>Serviços</a>
-              <a>Sobre nós</a>
-              <a>Trabalho Conosco</a>
-              <a>Blog</a>
+              {item.menu.map((item, index) => (
+                <a key={index}>{item}</a>
+              ))}
             </div>
             <div className="content-tag">
-              <div>Estamos contratando!</div>
+              <div>{item.tag}</div>
             </div>
           </div>
         </div>
         <div className="copyright">
           <span>Copyright © 2020 Space Rocket.</span>
-          <span>Design por Guilherme Cavalcante</span>
+          <span>{item.designer}</span>
         </div>
       </Footerdefault>
     </>

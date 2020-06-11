@@ -1,14 +1,13 @@
+import PropTypes from "prop-types";
 import { Section, MethodItem } from "./styles";
 
 export default function MethodSection(props) {
+  const { title, subtitle, method } = props;
   return (
     <>
       <div className="content-center-header">
-        <h3>Metodologia</h3>
-        <h4 style={{ maxWidth: "551px" }}>
-          Disponibilizamos de um processo simplificado do desenvolvimento da sua
-          solução:
-        </h4>
+        <h3>{title}</h3>
+        <h4 style={{ maxWidth: "551px" }}>{subtitle}</h4>
       </div>
       <Section>
         <div className="content">
@@ -17,10 +16,10 @@ export default function MethodSection(props) {
               <div className="content-item">
                 <div className="description">
                   <label className="id-item">01</label>
-                  <label>Reunião Exploratória</label>
+                  <label>{method.method01.title}</label>
                 </div>
                 <div className="icon-item border-ellipse Stack-left">
-                  <img src="assets/method01.svg" alt="" />
+                  <img src={method.method01.img} alt="" />
                 </div>
               </div>
               <img id="line-one" src="assets/line01.svg" alt="" />
@@ -28,11 +27,11 @@ export default function MethodSection(props) {
             <MethodItem align="left">
               <div className="content-item">
                 <div className="description">
-                  <label className="id-item">01</label>
-                  <label>Reunião Exploratória</label>
+                  <label className="id-item">02</label>
+                  <label>{method.method02.title}</label>
                 </div>
                 <div className="icon-item border-ellipse">
-                  <img src="assets/method01.svg" alt="" />
+                  <img src={method.method02.img} alt="" />
                 </div>
               </div>
               <img id="line-two" src="assets/line02.svg" alt="" />
@@ -50,18 +49,14 @@ export default function MethodSection(props) {
               <img id="line-three" src="assets/line02.svg" alt="" />
               <div className="content-item">
                 <div className="icon-item border-ellipse">
-                  <img src="assets/method01.svg" alt="" />
+                  <img src={method.method03.img} alt="" />
                 </div>
                 <div className="description">
-                  <label>Reunião Exploratória</label>
-                  <label className="id-item">01</label>
+                  <label>{method.method03.title}</label>
+                  <label className="id-item">03</label>
                 </div>
                 <div className="content-item-legend">
-                  <label>
-                    Nessa etapa sua ideia será analisada a fundo onde será
-                    estabelecido todas as etapas do fluxo do projeto para os
-                    próximos passos.
-                  </label>
+                  <label>{method.method03.description}</label>
                 </div>
               </div>
             </MethodItem>
@@ -69,86 +64,23 @@ export default function MethodSection(props) {
               <img id="line-four" src="assets/line04.svg" alt="" />
               <div className="content-item">
                 <div className="icon-item border-ellipse">
-                  <img src="assets/method01.svg" alt="" />
+                  <img src={method.method04.img} alt="" />
                 </div>
                 <div className="description">
-                  <label>Reunião Exploratória</label>
-                  <label className="id-item">01</label>
+                  <label>{method.method04.title}</label>
+                  <label className="id-item">04</label>
                 </div>
               </div>
             </MethodItem>
           </div>
         </div>
       </Section>
-      {/* <Section>
-        <div className="content">
-          <div className="content-left">
-            <div className="method left">
-              <div className="item item-left">
-                <div>
-                  <span id="id-item">01.</span>
-                  <span>Reunião Exploratória</span>
-                </div>
-              </div>
-              <div className="icon">
-                <img src="assets/method01.svg" />
-              </div>
-              <div id="line-one">
-                <img src="assets/line01.svg" />
-              </div>
-            </div>
-
-            <div className="method left">
-              <div className="item item-left">
-                <div>
-                  <span id="id-item">01.</span>
-                  <span>Reunião Exploratória</span>
-                </div>
-              </div>
-              <div className="icon">
-                <img src="assets/method01.svg" />
-              </div>
-              <div id="line-two">
-                <img src="assets/line02.svg" />
-              </div>
-            </div>
-          </div>
-
-          <div className="content-main"></div>
-
-          <div className="content-left">
-            <div className="method right">
-              <div id="line-three">
-                <img src="assets/line03.svg" />
-              </div>
-              <div className="icon">
-                <img src="assets/method01.svg" />
-              </div>
-              <div className="item item-right">
-                <div>
-                  <span>Reunião Exploratória</span>
-                  <span id="id-item">03.</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="method right">
-              <div id="line-four">
-                <img src="assets/line04.svg" />
-              </div>
-              <div className="icon">
-                <img src="assets/method01.svg" />
-              </div>
-              <div className="item item-right">
-                <div>
-                  <span>Reunião Exploratória</span>
-                  <span id="id-item">04.</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Section> */}
     </>
   );
 }
+
+MethodSection.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  method: PropTypes.array.isRequired,
+};

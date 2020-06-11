@@ -57,7 +57,7 @@ export const ItemBlog = styled.div`
     padding: 20px;
     height: 174px;
     border-radius: 10px 10px 0px 0px;
-    background: url("assets/press_default.svg") 50% 50% no-repeat border-box;
+    background: url(${(props) => props.assets}) 50% 50% no-repeat border-box;
 
     img {
       border-radius: 10px 10px 0px 0px;

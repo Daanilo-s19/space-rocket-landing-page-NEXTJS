@@ -42,7 +42,7 @@ export const Section = styled.section`
       width: 100%;
       max-width: 96px;
       height: 96px;
-      background: url("assets/Ellipse.svg");
+      background: linear-gradient(40.72deg, #552ee5 14.56%, #ee5a59 85.55%);
 
       box-shadow: 0px 5px 60px rgba(32, 44, 61, 0.1);
       border-radius: 50%;
