@@ -31,7 +31,6 @@ export default function CommentsSection(props) {
         })}
         <CarouselController
           index={(controller % comments.length) + 1}
-          totalItem={comments.length}
           item={comments}
           back={() => setController(controller - 1)}
           skip={() => setController(controller + 1)}

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Router from "next/router";
 import { useEffect } from "react";
+import SocialMedia from "../components/SocialMedia";
 
 export default function Home() {
   useEffect(() => {
@@ -18,26 +19,7 @@ export default function Home() {
         </div>
         <img src="assets/line_bottom_splash.svg" id="line-bottom" />
         <div className="footer">
-          <div className="social-media">
-            <a href="/">
-              <img src="assets/whatsapp.svg" />
-            </a>
-            <a href="/">
-              <img src="assets/instagram.svg" />
-            </a>
-            <a href="/">
-              <img src="assets/facebook.svg" />
-            </a>
-            <a href="/">
-              <img src="assets/linkedin.svg" />
-            </a>
-            <a href="/">
-              <img src="assets/youtube.svg" />
-            </a>
-            <a href="/">
-              <img src="assets/blog.svg" />
-            </a>
-          </div>
+          <SocialMedia />
           <label>oi@spacerocket.com.br</label>
           <label>71 98219-1648</label>
           <label>CNPJ: 34.776.891/0001-94</label>
@@ -46,7 +28,7 @@ export default function Home() {
     </>
   );
 }
-// MEDIA QUERIE A PARTIR DE 500
+
 const Content = styled.div`
   width: 100%;
   padding: 88px 0;

@@ -11,6 +11,8 @@ import BlogSection from "../../components/OurBlog";
 import useI18n from "../../hooks/use-i18n";
 import en from "../../locales/en.json";
 import pt from "../../locales/pt.json";
+import BannerStarted from "../../components/BannerStarted";
+import Footer from "../../components/Footer";
 
 export default function Home() {
   const i18n = useI18n();
@@ -116,6 +118,8 @@ export default function Home() {
           ],
         ]}
       />
+      <BannerStarted />
+      <Footer />
     </>
   );
 }
