@@ -10,10 +10,7 @@ export default function Menu(props) {
         <img src="assets/logo.svg" />
       </div>
       <div className="content-menu">
-        {item.menu.map((item, index) => (
-          <a key={index}>{item}</a>
-        ))}
-
+        {item.menu && item.menu.map((item, index) => <a key={index}>{item}</a>)}
         <Button>{item.button}</Button>
       </div>
     </Navbar>

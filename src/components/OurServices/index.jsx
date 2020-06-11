@@ -7,15 +7,16 @@ export default function ServicesSection(props) {
   return (
     <>
       <SectionDefault title={title} subtitle={subtitle}>
-        {item.map((element, index) => {
-          return (
-            <ItemService key={index}>
-              <img src={element.img} />
-              <strong>{element.title}</strong>
-              <span>{element.subtitle}</span>
-            </ItemService>
-          );
-        })}
+        {item &&
+          item.map((element, index) => {
+            return (
+              <ItemService key={index}>
+                <img src={element.img} />
+                <strong>{element.title}</strong>
+                <span>{element.subtitle}</span>
+              </ItemService>
+            );
+          })}
       </SectionDefault>
     </>
   );

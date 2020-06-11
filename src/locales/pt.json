@@ -1,7 +1,205 @@
 {
-  "hero": {
-    "title": "Criamos, desenvolvemos e gerenciamos produtos digitais.",
-    "subtitle": "Impulsionamos seu negócio através da tecnologia, desenvolvendo soluções digitais exclusivas para seu empreendimento.",
-    "button": "Comece um projeto"
+  "homepage": {
+    "menu": {
+      "item": {
+        "button": "Comece um projeto",
+        "menu": ["Home", "Serviços", "Sobre nós", "Blog"]
+      }
+    },
+    "hero": {
+      "title": "Criamos, desenvolvemos e gerenciamos produtos digitais.",
+      "subtitle": "Impulsionamos seu negócio através da tecnologia, desenvolvendo soluções digitais exclusivas para seu empreendimento.",
+      "button": "Comece um projeto"
+    },
+    "awardsSection": {
+      "title": "Premiações",
+      "subtitle": "Reconhecimento de muito trabalho",
+      "item": [
+        {
+          "years": "2019",
+          "local": "Correio de Futuro",
+          "awards": "1° lugar"
+        },
+        {
+          "years": "2018",
+          "local": "Desafios Bahia Mercado Agri",
+          "awards": "1° lugar"
+        },
+        {
+          "years": "2017",
+          "local": "Desafios Bahia emprega",
+          "awards": "1° lugar"
+        },
+        {
+          "years": "2017",
+          "local": "Inova mais saúde",
+          "awards": "1° lugar"
+        },
+        {
+          "years": "2019",
+          "local": "Hackathon Solidário",
+          "awards": "Finalista"
+        }
+      ]
+    },
+    "ServicesSection": {
+      "title": "serviços",
+      "subtitle": "A solução ideal para o seu negócio digital",
+      "item": [
+        {
+          "img": "assets/Union.svg",
+          "title": "Aplicativos",
+          "subtitle": "Construímos aplicativos personalizados para seu empreendimento, soluções exclusivas para dispositivos Android e IOS."
+        },
+        {
+          "img": "assets/web_services.svg",
+          "title": "Web Sites",
+          "subtitle": "Criamos e atualizamos seu website com um design customizado e elementos atrativos, pensando sempre em estabelecer a presença da sua empresa na internet."
+        },
+        {
+          "img": "assets/plataform_services.svg",
+          "title": "Plataformas Web",
+          "subtitle": " Desenvolvemos sistemas web visando automatizar e facilitar funções e processos da sua empresa, trazendo um diferencial competitivo para o seu negócio."
+        }
+      ]
+    },
+    "methodSection": {
+      "title": "Metodologia",
+      "subtitle": "Disponibilizamos de um processo simplificado do desenvolvimento da sua solução:",
+      "method": {
+        "method01": {
+          "title": "Reunião Exploratória",
+          "description": ""
+        },
+        "method02": {
+          "title": "Criação do design",
+          "description": ""
+        },
+        "method03": {
+          "title": "Desenvolvimento",
+          "description": "Nessa etapa sua ideia será analisada a fundo onde será estabelecido todas as etapas do fluxo do projeto para os próximos passos."
+        },
+        "method04": {
+          "title": "Entrega e Feedback",
+          "description": "Nessa etapa sua ideia será analisada a fundo onde será estabelecido todas as etapas do fluxo do projeto para os próximos passos."
+        }
+      }
+    },
+    "casesSection": {
+      "title": "Cases",
+      "subtitle": "Confira nossos últimos trabalhos",
+      "allCases": {
+        "parte1": "Conheça todos",
+        "parte2": "nossos projetos"
+      },
+      "item": [
+        {
+          "tag": "UI, Front-end, back-end",
+          "img": "assets/image_case_default.png",
+          "title": "Leitor Pauteiro",
+          "description": "O leitor pauteiro é uma plataforma desenvolvida para o jornal Correio da Bahia, onde os seus leitores podem enviar sugestões de notícias ou fazer denúncias diretamente para a redação do jornal por meio de um chatbot a Rosa. Este projeto fez parte do prêmio Correio de Futuro do ano 2019"
+        },
+        {
+          "tag": "UI, Front-end, back-end",
+          "img": "assets/image_case_default.png",
+          "title": "Data And Nutrition",
+          "description": "Data And Nutrition é uma plataforma utilizada em hospitais para gestão nutricional de pacientes internados, auxiliando ao combate à desnutrição hospitalar e proporcionando um acompanhamento contínuo do estado dos internos."
+        },
+        {
+          "tag": "UI, Front-end, back-end",
+          "img": "assets/image_case_default.png",
+          "title": "Dizziness App",
+          "description": "Aplicativo utilizado como ferramenta auxiliar no combate da tontura e labirintite. O Dizziness App nasceu com o propósito de auxiliar especialistas em audiologia e fonoaudiologistas no processo de tratamento dos pacientes, fazendo com que os mesmos ganhem resistência a circunstâncias que provoquem desconforto."
+        }
+      ]
+    },
+    "commentsSection": {
+      "title": "Depoimentos",
+      "subtitle": "Feedback dos nossos clientes",
+      "item": [
+        {
+          "imageUser": "assets/user_default.svg",
+          "name": "Nilson",
+          "role": "(Médico Nutrologista) - Data And Nutrition",
+          "comments": "Gosto sempre de trabalhar com a turma. Sempre fazem um bom trabalho e as coisas funcionam bem."
+        },
+        {
+          "imageUser": "assets/user_default.svg",
+          "name": "Danilo",
+          "role": "Dev",
+          "comments": "Os caras são fodas d++"
+        },
+        {
+          "imageUser": "assets/user_default.svg",
+          "name": "José",
+          "role": "Dev",
+          "comments": "Bacaaana"
+        }
+      ]
+    },
+    "pressSection": {
+      "title": "Press",
+      "subtitle": "Aonde saimos na mídia",
+      "more": "Matéria Completa",
+      "item": [
+        [
+          {
+            "img": "assets/press/image01.svg",
+            "title": "Leitor pauteiro: vencedor do Correio de...",
+            "description": "A ideia é que você, leitor, possa enviar sugestões de pautas e acumule pontos pelas ideias. Um robô organizará as propostas e oferecerá as melhores opções para o repórter, a depender da editoria... "
+          },
+          {
+            "img": "assets/press/image02.svg",
+            "title": "Com cerca de 80 mil visitantes, Campus...",
+            "description": "A Campus Party Bahia, que terminou neste domingo (13), na Arena Fonte Nova, em Salvador, atraiu público de 80 mil visitantes desde a quarta-feira (9), além dos seis mil “campuseiros” que..."
+          },
+          {
+            "img": "assets/press/image03.svg",
+            "title": "Tecnologia e inovação: Campus Party...",
+            "description": "Evento mistura tecnologia, inovação, educação e empreendedorismo."
+          }
+        ]
+      ]
+    },
+    "blogSection": {
+      "title": "Blog",
+      "subtitle": "Últimos artigos ",
+      "more": "Ler mais",
+      "item": [
+        [
+          {
+            "img": "assets/blog/image1.svg",
+            "tag": "freelancer",
+            "title": "Propostas para Freelancers: como montar e como gerenciar?",
+            "description": "Muitos Freelancers possuem muita dificuldade em precificar projetos e montar propostas. Além disso, o tempo para montar uma boa proposta"
+          },
+          {
+            "img": "assets/blog/image2.svg",
+            "tag": "freelancer",
+            "title": "Sou Freelancer: Como precificar um projeto?",
+            "description": "Precificar é um dos maiores sofrimentos de qualquer freelancer, seja ele da área de humanas ou exatas. Saber quanto o seu trabalho vale..."
+          },
+          {
+            "img": "assets/blog/image3.svg",
+            "tag": "freelancer",
+            "title": "Gestão de tempo: como otimizar a sua vida freelancer",
+            "description": "Muito se fala em gestão de tempo, principalmente quando o assunto é o trabalho como freelancer. Mas como administrar clientes..."
+          }
+        ]
+      ]
+    },
+    "bannerStarted": {
+      "title": "Não sabe por onde começar?",
+      "subtitle": "Nós vamos ajudá-lo a descobrir.",
+      "button": "Vamos Conversar"
+    },
+
+    "footer": {
+      "item": {
+        "tag": "Estamos contratando",
+        "designer": "Design por Guilherme Cavalcante",
+        "menu": ["Cases", "Serviços", "Sobre nós", "Trabalho Conosco", "Blog"]
+      }
+    }
   }
 }

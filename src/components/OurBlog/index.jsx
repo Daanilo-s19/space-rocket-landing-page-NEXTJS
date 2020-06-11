@@ -11,30 +11,31 @@ export default function BlogSection(props) {
   return (
     <>
       <SectionDefault title={title} subtitle={subtitle}>
-        {blog.map((list, index) => {
-          return (
-            controller % blog.length === index &&
-            list.map((element, index) => (
-              <ItemBlog key={index} assets={element.img}>
-                <div className="content-image">
-                  <div className="tag">{element.tag}</div>
-                </div>
-                <div className="content">
-                  <label>{element.title}</label>
-                  <p>{element.description}</p>
-                  <AboutMore title={more} />
-                </div>
-              </ItemBlog>
-            ))
-          );
-        })}
+        {blog &&
+          blog.map((list, index) => {
+            return (
+              controller % blog.length === index &&
+              list.map((element, index) => (
+                <ItemBlog key={index} assets={element.img}>
+                  <div className="content-image">
+                    <div className="tag">{element.tag}</div>
+                  </div>
+                  <div className="content">
+                    <label>{element.title}</label>
+                    <p>{element.description}</p>
+                    <AboutMore title={more} />
+                  </div>
+                </ItemBlog>
+              ))
+            );
+          })}
       </SectionDefault>
       <Content>
         <CarouselController
           dots={true}
           index={(controller % blog.length) + 1}
           totalItem={blog.length}
-          item={blog}
+          item={blog || []}
           back={() => setController(controller - 1)}
           skip={() => setController(controller + 1)}
         />

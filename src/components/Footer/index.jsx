@@ -14,9 +14,8 @@ export default function Footer(props) {
           <div className="content">
             <SocialMedia />
             <div className="content-menu">
-              {item.menu.map((item, index) => (
-                <a key={index}>{item}</a>
-              ))}
+              {item.menu &&
+                item.menu.map((item, index) => <a key={index}>{item}</a>)}
             </div>
             <div className="content-tag">
               <div>{item.tag}</div>

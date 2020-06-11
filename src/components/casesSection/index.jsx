@@ -11,22 +11,23 @@ export default function CasesSection(props) {
         <h3>Cases</h3>
         <h4>Confira nossos últimos trabalhos</h4>
       </div>
-      {cases.map((element, index) => (
-        <Cases key={index} order={index % 2 == 0 ? "true" : "false"}>
-          <div className="content-image">
-            <img src={element.img} alt="" />
-          </div>
-          <div className="content-description">
-            <h5>{element.tag}</h5>
-
-            <h4>{element.title}</h4>
-            <div className="divider">
-              <span>{element.description}</span>
+      {cases &&
+        cases.map((element, index) => (
+          <Cases key={index} order={index % 2 == 0 ? "true" : "false"}>
+            <div className="content-image">
+              <img src={element.img} alt="" />
             </div>
-            <AboutMore title=" Mais Informações" />
-          </div>
-        </Cases>
-      ))}
+            <div className="content-description">
+              <h5>{element.tag}</h5>
+
+              <h4>{element.title}</h4>
+              <div className="divider">
+                <span>{element.description}</span>
+              </div>
+              <AboutMore title=" Mais Informações" />
+            </div>
+          </Cases>
+        ))}
       <AllCases>
         <div className="project">
           <img src="assets/google_grey.svg" />

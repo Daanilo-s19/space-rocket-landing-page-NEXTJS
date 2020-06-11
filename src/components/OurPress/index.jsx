@@ -9,23 +9,24 @@ export default function PressSection(props) {
   const [controller, setController] = useState(1);
   return (
     <SectionDefault title={title} subtitle={subtitle}>
-      {item.map((list, index) => {
-        return (
-          controller % item.length === index &&
-          list.map((element, index) => (
-            <ItemPress key={index} assets={element.img}>
-              <div className="content-image">
-                <div className="filter" />
-              </div>
-              <div className="content">
-                <label>{element.title}</label>
-                <p>{element.description}</p>
-                <AboutMore title={more} />
-              </div>
-            </ItemPress>
-          ))
-        );
-      })}
+      {item &&
+        item.map((list, index) => {
+          return (
+            controller % item.length === index &&
+            list.map((element, index) => (
+              <ItemPress key={index} assets={element.img}>
+                <div className="content-image">
+                  <div className="filter" />
+                </div>
+                <div className="content">
+                  <label>{element.title}</label>
+                  <p>{element.description}</p>
+                  <AboutMore title={more} />
+                </div>
+              </ItemPress>
+            ))
+          );
+        })}
     </SectionDefault>
   );
 }

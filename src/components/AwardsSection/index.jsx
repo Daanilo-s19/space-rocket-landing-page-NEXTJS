@@ -16,17 +16,18 @@ export default function AwardsSection(props) {
       </div>
       <div className="content-item">
         <div className="content-alignment-flex">
-          {item.map((element, index) => {
-            return (
-              <Item key={index}>
-                <div className="circle">
-                  <strong id="years">{element.years}</strong>
-                  <strong id="local">{element.local}</strong>
-                  <strong id="awards">{element.awards}</strong>
-                </div>
-              </Item>
-            );
-          })}
+          {item &&
+            item.map((element, index) => {
+              return (
+                <Item key={index}>
+                  <div className="circle">
+                    <strong id="years">{element.years}</strong>
+                    <strong id="local">{element.local}</strong>
+                    <strong id="awards">{element.awards}</strong>
+                  </div>
+                </Item>
+              );
+            })}
         </div>
       </div>
       {/* <ParticlesBackGround /> */}
