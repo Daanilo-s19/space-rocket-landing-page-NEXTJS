@@ -11,21 +11,54 @@ export default function AwardsSection(props) {
           <h4>{subtitle}</h4>
         </div>
         <div className="border">
-          <img src="assets/gradient.svg" />
+          <img src="assets/gradient_responsive.svg" />
         </div>
       </div>
       <div className="content-item">
-        <div className="content-alignment-flex">
+        <div className="content-alignment-flex ">
           {item &&
             item.map((element, index) => {
               return (
-                <Item key={index}>
-                  <div className="circle">
-                    <strong id="years">{element.years}</strong>
-                    <strong id="local">{element.local}</strong>
-                    <strong id="awards">{element.awards}</strong>
-                  </div>
-                </Item>
+                <div>
+                  <Item key={index}>
+                    <div className="circle">
+                      <strong id="years">{element.years}</strong>
+                      <strong id="local">{element.local}</strong>
+                      <strong id="awards">{element.awards}</strong>
+                    </div>
+                  </Item>
+                </div>
+              );
+            })}
+        </div>
+        <div className="content-alignment-responsive">
+          {item &&
+            item.map((element, index) => {
+              let alignClass = "";
+              switch (index % 3) {
+                case 0:
+                  alignClass = "align-top-left";
+                  break;
+                case 1:
+                  alignClass = "align-top-right";
+                  break;
+                case 2:
+                  alignClass = "align-top-center";
+                  break;
+                default:
+                  alignClass = "align-top-center";
+                  break;
+              }
+              return (
+                <div className={alignClass}>
+                  <Item key={index}>
+                    <div className="circle">
+                      <strong id="years">{element.years}</strong>
+                      <strong id="local">{element.local}</strong>
+                      <strong id="awards">{element.awards}</strong>
+                    </div>
+                  </Item>
+                </div>
               );
             })}
         </div>

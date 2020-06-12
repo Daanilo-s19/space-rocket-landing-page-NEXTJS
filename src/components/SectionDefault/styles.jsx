@@ -11,4 +11,15 @@ export const Section = styled.section`
     grid-template-columns: repeat(3, 1fr);
     column-gap: 36px;
   }
+
+  @media ${({ theme }) => theme.breakpoint.tablet} {
+    grid-template-columns: 32px 1fr 32px;
+    .content-item {
+      grid-column: 2/3;
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      row-gap: 36px;
+    }
+  }
 `;

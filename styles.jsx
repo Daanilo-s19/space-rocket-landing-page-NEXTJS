@@ -96,5 +96,17 @@ export const Container = styled.div`
     font-size: 20px;
     line-height: 24px;
   }
+
+  @media ${({ theme }) => theme.breakpoint.mobileL} {
+    h3 {
+      font-size: 10px;
+      line-height: 12px;
+    }
+    h4 {
+      width: 296px;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
   /* background: blue; */
 `;

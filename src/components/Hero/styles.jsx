@@ -5,7 +5,8 @@ export const Header = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 88px;
+  margin-top: 176px;
+
   background: url("assets/filter_space.svg");
 
   h1 {
@@ -27,5 +28,17 @@ export const Header = styled.header`
     text-align: center;
     margin-bottom: 64px;
     color: rgba(255, 255, 255, 0.4);
+  }
+  @media ${({ theme }) => theme.breakpoint.mobileL} {
+    h1 {
+      width: 304px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+    h2 {
+      width: 296px;
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 `;

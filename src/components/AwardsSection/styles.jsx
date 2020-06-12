@@ -11,7 +11,7 @@ export const Section = styled.section`
 
   .content-header {
     display: grid;
-    grid-template-columns: 155px 1.5fr 2fr 155px;
+    grid-template-columns: minmax(auto, 155px) 1.5fr 2fr minmax(auto, 155px);
 
     .title {
       grid-column: 2/3;
@@ -28,7 +28,7 @@ export const Section = styled.section`
   .content-item {
     grid-row: 2/3;
     display: grid;
-    grid-template-columns: 155px 1fr 155px;
+    grid-template-columns: minmax(auto, 155px) 1fr minmax(auto, 155px);
 
     .content-alignment-flex {
       grid-column: 2/3;
@@ -36,6 +36,46 @@ export const Section = styled.section`
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
+    }
+    .content-alignment-responsive {
+      display: none;
+    }
+  }
+
+  @media ${({ theme }) => theme.breakpoint.tablet} {
+    .content-item {
+      .content-alignment-flex {
+        display: none;
+      }
+
+      .content-alignment-responsive {
+        grid-column: 2/3;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+
+        justify-items: center;
+
+        .align-top-left {
+          grid-column: 1/2;
+        }
+        .align-top-center {
+          grid-column: 2/3;
+        }
+        .align-top-right {
+          grid-column: 3/4;
+        }
+      }
+    }
+    .content-header {
+      margin: 0 32px;
+      display: grid;
+      grid-template-columns: 0px 1fr 0px;
+      grid-template-rows: repeat(2, 1fr);
+
+      .border {
+        grid-column: 2/3;
+        grid-row: 2/3;
+      }
     }
   }
 `;

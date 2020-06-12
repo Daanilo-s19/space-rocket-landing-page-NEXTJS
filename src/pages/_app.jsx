@@ -22,12 +22,10 @@ export default class MyApp extends App {
             content="width=device-width, initial-scale=1.0"
           ></meta>
         </Head>
-        <Container>
-          <GlobalStyle />
-          <I18n lngDict={pageProps.lngDict} locale={pageProps.lng}>
-            <Component {...pageProps} />
-          </I18n>
-        </Container>
+        <GlobalStyle />
+        <I18n lngDict={pageProps.lngDict} locale={pageProps.lng}>
+          <Component {...pageProps} />
+        </I18n>
       </ThemeProvider>
     );
   }
