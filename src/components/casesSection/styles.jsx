@@ -50,6 +50,18 @@ export const AllCases = styled.div`
       -webkit-text-fill-color: transparent;
     }
   }
+  @media ${({ theme }) => theme.breakpoint.mobileL} {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    .project {
+      display: none;
+    }
+    .description {
+      width: auto;
+      margin: 0;
+      text-align: center;
+    }
+  }
 `;
 export const Cases = styled.div`
   width: 100%;
@@ -68,8 +80,7 @@ export const Cases = styled.div`
     width: 100%;
     max-width: 416px;
     height: 278px;
-    left: 279px;
-    top: 2248px;
+
     background: linear-gradient(
       180deg,
       rgba(85, 46, 229, 0.4) 0%,
@@ -116,6 +127,30 @@ export const Cases = styled.div`
       color: #ffffff;
       opacity: 0.8;
       margin: 16px 0 0;
+    }
+  }
+
+  @media ${({ theme }) => theme.breakpoint.mobileL} {
+    padding: 0;
+    margin: 88px 0;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 32px;
+    .content-image {
+      max-width: 90%;
+      grid-row: 1/2;
+      grid-column: 1/2;
+      border-radius: ${(props) =>
+        props.order === "true" ? " 20px 0 0 20px" : "0 20px 20px 0"};
+      justify-content: ${(props) =>
+        props.order === "true" ? "flex-end" : "flex-start"};
+    }
+    .content-description {
+      grid-row: 2/3;
+      grid-column: 1/2;
+      justify-self: center;
     }
   }
 `;

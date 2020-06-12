@@ -3,9 +3,7 @@ import styled from "styled-components";
 export const BorderTop = styled.div`
   width: 100%;
   height: 1px;
-  img {
-    max-width: 100%;
-  }
+  background: -webkit-linear-gradient(10.34deg, #552ee5 14.56%, #ee5a59 85.55%);
 `;
 export const Footerdefault = styled.div`
   width: 100%;
@@ -72,6 +70,40 @@ export const Footerdefault = styled.div`
       font-size: 14px;
       line-height: 16px;
       opacity: 0.7;
+    }
+  }
+  @media ${({ theme }) => theme.breakpoint.tablet} {
+    .header {
+      height: auto;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, auto);
+      justify-items: center;
+
+      #slogan {
+        max-width: 500px;
+        height: 170px;
+      }
+
+      .content {
+        padding-top: 0;
+        display: grid;
+        justify-self: center;
+        justify-items: center;
+      }
+      .content-menu {
+        a {
+          font-size: 10px;
+        }
+      }
+
+      .content-tag {
+        margin-top: 10px;
+        margin-bottom: 20px;
+
+        div {
+          margin-right: 0;
+        }
+      }
     }
   }
 `;

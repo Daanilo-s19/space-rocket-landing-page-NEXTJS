@@ -25,4 +25,20 @@ export const Banner = styled.div`
     line-height: 16px;
     opacity: 0.8;
   }
+  @media ${({ theme }) => theme.breakpoint.mobileL} {
+    max-width: 600px;
+    height: 200px;
+    justify-items: center;
+    border-radius: 0px;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto 1fr;
+
+    div {
+      text-align: center;
+    }
+    h4 {
+      width: auto;
+    }
+  }
 `;

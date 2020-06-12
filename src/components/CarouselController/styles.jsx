@@ -57,4 +57,7 @@ export const Carousel = styled.div`
       }
     }
   }
+  @media ${({ theme }) => theme.breakpoint.mobileL} {
+    padding: 0 32px;
+  }
 `;

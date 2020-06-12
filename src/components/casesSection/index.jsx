@@ -28,7 +28,7 @@ export default function CasesSection(props) {
             </div>
           </Cases>
         ))}
-      {/* <AllCases>
+      <AllCases>
         <div className="project">
           <img src="assets/google_grey.svg" />
         </div>
@@ -45,7 +45,7 @@ export default function CasesSection(props) {
           <span>{allCases}</span>
           <img src="assets/case_more_information.svg" />
         </div>
-      </AllCases> */}
+      </AllCases>
     </>
   );
 }

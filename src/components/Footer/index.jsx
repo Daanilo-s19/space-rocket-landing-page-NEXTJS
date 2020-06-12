@@ -5,12 +5,10 @@ export default function Footer(props) {
   const { item, designer, tag } = props;
   return (
     <>
-      <BorderTop>
-        <img src="assets/line_top_footer.svg" />
-      </BorderTop>
+      <BorderTop />
       <Footerdefault>
         <div className="header">
-          <img src="assets/slogan.svg" />
+          <img id="slogan" src="assets/slogan.svg" />
           <div className="content">
             <SocialMedia />
             <div className="content-menu">

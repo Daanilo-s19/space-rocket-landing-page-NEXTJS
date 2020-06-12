@@ -117,8 +117,8 @@ export default function Home() {
           subtitle={i18n.t("homepage.bannerStarted.subtitle")}
           button={i18n.t("homepage.bannerStarted.button")}
         />
-        <Footer item={i18n.t("homepage.footer.item")} />
       </Container>
+      <Footer item={i18n.t("homepage.footer.item")} />
     </>
   );
 }

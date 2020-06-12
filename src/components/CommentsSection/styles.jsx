@@ -54,4 +54,10 @@ export const Section = styled.div`
       }
     }
   }
+
+  @media ${({ theme }) => theme.breakpoint.mobileL} {
+    .comments {
+      border-radius: 0;
+    }
+  }
 `;
