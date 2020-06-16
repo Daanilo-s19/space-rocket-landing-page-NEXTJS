@@ -34,6 +34,7 @@ export default function Home() {
       />
       <Container>
         <Hero
+          activeButton={true}
           title={i18n.t("homepage.hero.title")}
           subtitle={i18n.t("homepage.hero.subtitle")}
           textButton={i18n.t("homepage.hero.button")}
@@ -83,6 +84,7 @@ export default function Home() {
           }}
         />
         <CasesSection
+          pageCases={false}
           title={i18n.t("homepage.casesSection.title")}
           subtitle={i18n.t("homepage.casesSection.subtitle")}
           allCases={

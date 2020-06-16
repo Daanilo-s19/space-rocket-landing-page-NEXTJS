@@ -1,0 +1,45 @@
+{
+  "menu": {
+    "item": {
+      "button": "Comece um Projeto",
+      "menu": [
+        { "link": "/homePage", "name": "Início" },
+        { "link": "#", "name": "Sobre nós" },
+        { "link": "#", "name": "Blog" }
+      ]
+    }
+  },
+  "hero": {
+    "title": " Nossos projetos",
+    "subtitle": "Impulsionamos seu negócio através da tecnologia, desenvolvendo soluções digitais exclusivas para seu empreendimento."
+  },
+  "casesSection": {
+    "title": "Cases",
+    "subtitle": "Confira nossos últimos trabalhos",
+    "clients": "Outros clientes",
+    "allCases": {
+      "parte1": "Conheça todos",
+      "parte2": "nossos projetos"
+    },
+    "item": [
+      {
+        "tag": "UI, Front-end, back-end",
+        "img": "assets/image_case_default.png",
+        "title": "Leitor Pauteiro",
+        "description": "O leitor pauteiro é uma plataforma desenvolvida para o jornal Correio da Bahia, onde os seus leitores podem enviar sugestões de notícias ou fazer denúncias diretamente para a redação do jornal por meio de um chatbot a Rosa. Este projeto fez parte do prêmio Correio de Futuro do ano 2019"
+      },
+      {
+        "tag": "UI, Front-end, back-end",
+        "img": "assets/image_case_default.png",
+        "title": "Data And Nutrition",
+        "description": "Data And Nutrition é uma plataforma utilizada em hospitais para gestão nutricional de pacientes internados, auxiliando ao combate à desnutrição hospitalar e proporcionando um acompanhamento contínuo do estado dos internos."
+      },
+      {
+        "tag": "UI, Front-end, back-end",
+        "img": "assets/image_case_default.png",
+        "title": "Dizziness App",
+        "description": "Aplicativo utilizado como ferramenta auxiliar no combate da tontura e labirintite. O Dizziness App nasceu com o propósito de auxiliar especialistas em audiologia e fonoaudiologistas no processo de tratamento dos pacientes, fazendo com que os mesmos ganhem resistência a circunstâncias que provoquem desconforto."
+      }
+    ]
+  }
+}

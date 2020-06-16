@@ -1,4 +1,5 @@
 import { useState } from "react";
+// import Link from "next/link";
 import Form from "../Form";
 import Button from "../Button";
 import PropTypes from "prop-types";
@@ -17,7 +18,11 @@ export default function Menu(props) {
           </div>
           <div className="content-menu">
             {item.menu &&
-              item.menu.map((item, index) => <a key={index}>{item}</a>)}
+              item.menu.map((item, index) => (
+                <a href={item.link} key={index}>
+                  {item.name}
+                </a>
+              ))}
             <Button
               onClick={() => setForm(true)}
               bgHover={({ theme }) => theme.colorsButton.primary}

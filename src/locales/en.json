@@ -3,7 +3,11 @@
     "menu": {
       "item": {
         "button": "Start a Project",
-        "menu": ["Home", "About us", "Blog"]
+        "menu": [
+          { "link": "/homePage", "name": "Home" },
+          { "link": "#", "name": "About us" },
+          { "link": "#", "name": "Blog" }
+        ]
       }
     },
     "hero": {

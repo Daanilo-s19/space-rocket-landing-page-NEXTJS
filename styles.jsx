@@ -47,6 +47,11 @@ button{
   overflow: visible;
 
 }
+a:link {
+    font-weight: normal;
+    text-decoration: none;
+    color: #fff;
+}
 ul,
 li {
   list-style: none;

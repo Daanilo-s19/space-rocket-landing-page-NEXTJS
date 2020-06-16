@@ -14,7 +14,9 @@ export const AllCases = styled.div`
   border-radius: 10px;
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr) 2fr;
+  grid-template-columns: ${(props) =>
+    props.pageCases ? "repeat(6, 1fr)" : "repeat(4, 1fr) 2fr"};
+
   align-items: center;
 
   .project {
@@ -63,10 +65,12 @@ export const AllCases = styled.div`
     }
   }
   @media ${({ theme }) => theme.breakpoint.mobileL} {
-    grid-template-columns: 1fr;
+    ${(props) => !props.pageCases && "grid-template-columns: 1fr 1fr 1fr "};
+    ${(props) => !props.pageCases && "grid-template-rows: 1fr 1fr "};
+
     justify-items: center;
     .project {
-      display: none;
+      ${(props) => !props.pageCases && " display: none;"};
     }
     .description {
       width: auto;

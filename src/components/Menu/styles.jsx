@@ -33,6 +33,7 @@ export const Navbar = styled.nav`
       opacity: 0.7;
       margin-right: 56px;
       transition: 0.5s;
+      color: #fff;
       &:hover {
         opacity: 1;
         cursor: pointer;

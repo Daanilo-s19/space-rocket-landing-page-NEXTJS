@@ -1,0 +1,46 @@
+{
+  "menu": {
+    "item": {
+      "button": "Comece um Projeto",
+      "menu": [
+        { "link": "/homePage", "name": "Início" },
+        { "link": "#", "name": "Sobre nós" },
+        { "link": "#", "name": "Blog" }
+      ]
+    }
+  },
+  "hero": {
+    "title": "Our projects",
+    "subtitle": "We boost your business through technology, developing exclusive digital solutions for your enterprise.",
+    "button": "Start a project"
+  },
+  "casesSection": {
+    "title": "Cases",
+    "subtitle": "Check out our latest work",
+    "clients": "Other customers",
+    "allCases": {
+      "parte1": "Meet everyone",
+      "parte2": "our projects"
+    },
+    "item": [
+      {
+        "tag": "UI, Front-end, back-end",
+        "img": "assets/image_case_default.png",
+        "title": "Leitor Pauteiro",
+        "description": "The tariff reader is a platform developed for the Correio da Bahia newspaper, where its readers can send news suggestions or make complaints directly to the newspaper's editorial staff through a chatbot to Rosa. This project was part of Future Mail of the Year Award 2019 "
+      },
+      {
+        "tag": "UI, Front-end, back-end",
+        "img": "assets/image_case_default.png",
+        "title": "Data And Nutrition",
+        "description": "Data And Nutrition is a platform used in hospitals for nutritional management of inpatients, helping to combat hospital malnutrition and providing continuous monitoring of the status of inmates."
+      },
+      {
+        "tag": "UI, Front-end, back-end",
+        "img": "assets/image_case_default.png",
+        "title": "Dizziness App",
+        "description": "Application used as an auxiliary tool to combat dizziness and labyrinthitis. The Dizziness App was created with the purpose of assisting specialists in audiology and speech therapists in the process of treating patients, making them gain resistance to circumstances that cause discomfort. . "
+      }
+    ]
+  }
+}
