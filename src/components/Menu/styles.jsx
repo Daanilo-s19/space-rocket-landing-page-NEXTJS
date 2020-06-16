@@ -15,7 +15,6 @@ export const Navbar = styled.nav`
     grid-column: 2/3;
     display: grid;
     grid-template-columns: minmax(auto, 155px) 1fr 3fr minmax(auto, 155px);
-    background: url("assets/filter_space.svg");
   }
 
   .content-logo {

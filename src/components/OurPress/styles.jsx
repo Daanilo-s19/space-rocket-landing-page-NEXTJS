@@ -10,7 +10,7 @@ export const ItemPress = styled.div`
   .filter {
     width: 100%;
     height: 174px;
-    background: #552ee5;
+    background: ${({ theme }) => theme.colorsButton.primary};
     mix-blend-mode: normal;
     opacity: 0.4;
     border-radius: 10px 10px 0px 0px;

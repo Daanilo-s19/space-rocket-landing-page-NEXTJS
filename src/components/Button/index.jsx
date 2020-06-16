@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { ButtonDefault } from "./styles";
 
 export default function Button(props) {
-  const { children, childrenColor, bgColor, bgHover, shadow } = props;
+  const { children, childrenColor, bgColor, bgHover, shadow, onClick } = props;
 
   return (
     <ButtonDefault
@@ -10,6 +10,7 @@ export default function Button(props) {
       backgroundHover={bgHover}
       shadow={shadow}
       color={childrenColor}
+      onClick={onClick}
     >
       {children}
     </ButtonDefault>
@@ -17,6 +18,7 @@ export default function Button(props) {
 }
 
 Button.propTypes = {
+  onClick: PropTypes.func,
   background: PropTypes.string.isRequired,
   bgHover: PropTypes.string.isRequired,
   children: PropTypes.string.isRequired,

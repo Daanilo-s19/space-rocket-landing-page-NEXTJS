@@ -6,6 +6,11 @@ export const theme = {
     secundary: "#C7DEFF",
     third: "linear-gradient(40.72deg, #552EE5 14.56%, #EE5A59 85.55%);",
   },
+  colorsButton: {
+    primary: "#552ee5",
+    secundary: "#552ee5",
+    // third: "linear-gradient(40.72deg, #552EE5 14.56%, #EE5A59 85.55%);",
+  },
   background: {
     primary: "#02021e",
     secundary: "#161041",
@@ -33,6 +38,14 @@ export const GlobalStyle = createGlobalStyle`
   vertical-align: baseline;
   outline: none;
   box-sizing: border-box;
+}
+button{
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
 }
 ul,
 li {

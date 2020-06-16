@@ -16,6 +16,7 @@ export const AllCases = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr) 2fr;
   align-items: center;
+
   .project {
     width: 100%;
     max-width: 123px;
@@ -99,10 +100,14 @@ export const Cases = styled.div`
     );
     backdrop-filter: blur(10px);
     border-radius: 20px;
-
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(85, 46, 229, 0.4);
+    }
     img {
       width: 100%;
       max-width: 320px;
