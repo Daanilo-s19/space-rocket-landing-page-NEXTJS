@@ -19,19 +19,30 @@ export const Section = styled.section`
     height: 270px;
     background: url("assets/border_dash.svg");
     margin: 0 -50px;
-    /* animation: rotation 15s infinite; */
+    animation: spin 15s linear infinite;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
+    &:hover {
+      animation: none;
+      .circle {
+        animation: none;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+      }
+    }
+
     .circle {
       width: 100%;
       max-width: 224px;
       height: 224px;
-      background: rgba(255, 255, 255, 0.1);
+      background: #1b1b34;
+
       backdrop-filter: blur(10px);
       border-radius: 50%;
+      animation: spinoff 15s linear infinite;
 
       display: flex;
       justify-content: center;
@@ -42,6 +53,12 @@ export const Section = styled.section`
       max-width: 96px;
       height: 96px;
       background: linear-gradient(40.72deg, #552ee5 14.56%, #ee5a59 85.55%);
+      animation: spinoff 10s linear infinite;
+      cursor: pointer;
+
+      img {
+        animation: spin 10s linear infinite;
+      }
 
       box-shadow: 0px 5px 60px rgba(32, 44, 61, 0.1);
       border-radius: 50%;
@@ -52,6 +69,8 @@ export const Section = styled.section`
 
       &:hover {
         background: linear-gradient(40.72deg, #552ee5 14.56%, #ee5a59 85.55%);
+        max-width: 100px;
+        height: 100px;
       }
     }
   }
@@ -107,6 +126,8 @@ export const MethodItem = styled.div`
   .content-item {
     width: 100%;
     display: grid;
+    transition: 500ms;
+    cursor: pointer;
 
     grid-template-columns: ${(props) =>
       props.align === "left"
@@ -117,7 +138,7 @@ export const MethodItem = styled.div`
       props.align === "left"
         ? "linear-gradient(270deg,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0.1) 100%)"
         : "linear-gradient(270deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%)"};
-    backdrop-filter: blur(20px);
+    /* backdrop-filter: blur(20px); */
     border-radius: 1000px;
     align-self: center;
 
@@ -141,14 +162,11 @@ export const MethodItem = styled.div`
       grid-column: ${(props) => (props.align === "left" ? "2/3" : "1/2")};
       width: 60px;
       height: 60px;
-      z-index: 99;
-
       margin-top: -7px;
 
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
       border-radius: 50%;
-      transform: rotate(0deg);
 
       transform: matrix(-1, 0, 0, 1, 0, 0);
       display: flex;
@@ -158,15 +176,28 @@ export const MethodItem = styled.div`
       width: 60px;
       height: 60px;
       background: url("assets/Ellipse_sm.svg");
-
+      animation: rotation 15s linear infinite;
       display: flex;
       justify-content: center;
       align-items: center;
+
+      img {
+        animation: antiRotation 15s linear infinite;
+      }
     }
   }
 
   .content-item-legend {
-    display: none;
+    opacity: 0;
+    grid-column: 1/3;
+    padding-top: 16px;
+    max-width: 288px;
+    height: 42px;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    transition: 1s;
   }
 
   #line-top {
@@ -179,19 +210,9 @@ export const MethodItem = styled.div`
   &:hover {
     .content-item {
       background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(20px);
+      /* backdrop-filter: blur(20px); */
 
       .content-item-legend {
-        grid-column: 1/3;
-        padding-top: 16px;
-
-        max-width: 288px;
-        height: 42px;
-        font-size: 12px;
-        line-height: 14px;
-        display: flex;
-        align-items: center;
-        color: #ffffff;
         opacity: 0.6;
       }
 
@@ -216,136 +237,3 @@ export const MethodItem = styled.div`
     }
   }
 `;
-
-// export const MethodItem = styled.div`
-//   display: grid;
-//   grid-template-columns: ${(props) =>
-//     props.align === "left" ? "300px 1fr" : " 1fr 300px"};
-
-//   .content-item {
-//     display: grid;
-//     grid-template-columns: ${(props) =>
-//       props.align === "left" ? "5fr 1fr" : "1fr 5fr"};
-
-//     &:hover {
-//       .description {
-//         background: rgba(255, 255, 255, 0.1);
-//         backdrop-filter: blur(20px);
-//       }
-//       .icon-item {
-//         background: linear-gradient(40.72deg, #552ee5 14.56%, #ee5a59 85.55%);
-//         backdrop-filter: blur(10px);
-//       }
-
-//       .content-item-legend {
-//         padding-top: 16px;
-//         margin-left: 36px;
-//         width: 288px;
-//         height: 42px;
-//         font-size: 12px;
-//         line-height: 14px;
-//         display: flex;
-//         align-items: center;
-//         color: #ffffff;
-//         opacity: 0.6;
-//       }
-//     }
-
-//     .content-item-legend {
-//       display: none;
-//     }
-//     .description {
-//       ${(props) => props.align === "right" && "margin-left:-35px"}; /*HACK*/
-
-//       grid-column: ${(props) => (props.align === "left" ? "1/2" : "2/3")};
-//       grid-row: 1/2;
-//       width: 100%;
-//       max-width: 300px;
-//       height: 48px;
-//       background: ${(props /*HACK*/) =>
-//         props.align === "left"
-//           ? "linear-gradient(270deg,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0.1) 100%)"
-//           : "linear-gradient(270deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%)"};
-//       backdrop-filter: blur(20px);
-//       border-radius: 1000px;
-
-//       display: grid;
-//       grid-template-columns: ${(props) =>
-//         props.align === "left" ? "auto 1fr" : "1fr auto"};
-//       align-self: center;
-//       align-items: center;
-//       align-content: center;
-
-//       .id-item {
-//         margin: 0 16px;
-//         color: ${({ theme }) => theme.colors.primary};
-//       }
-//       label {
-//         font-weight: bold;
-//         font-size: 14px;
-//         line-height: 17px;
-//         text-align: ${(props) => (props.align === "left" ? "start" : "end")};
-//       }
-//     }
-//     .icon-item {
-//       ${(props) => props.align === "left" && " margin-left: -35px;"};
-//       grid-column: ${(props) => (props.align === "left" ? "2/3" : "1/2")};
-//       grid-row: 1/3;
-//       width: 60px;
-//       height: 60px;
-//       z-index: 99;
-
-//       background: rgba(255, 255, 255, 0.1);
-//       backdrop-filter: blur(10px);
-//       border-radius: 50%;
-//       transform: rotate(0deg);
-
-//       transform: matrix(-1, 0, 0, 1, 0, 0);
-//       display: flex;
-//       justify-content: center;
-//     }
-//     .border-ellipse {
-//       width: 60px;
-//       height: 60px;
-//       background: url("assets/Ellipse_sm.svg");
-
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//     }
-
-//     /* align-items: center; */
-//   }
-
-//   #line-one {
-//     align-self: end;
-//     margin: 0 0 0 -40px;
-//   }
-//   #line-two {
-//     align-self: start;
-//     margin: 0 0 0 -40px;
-//   }
-//   #line-three {
-//     align-self: end;
-//     /* margin: 0 0 0 -40px; */
-//   }
-//   #line-four {
-//     align-self: start;
-//     /* margin: 0 0 0 -40px; */
-//   }
-//   /* .Stack-left {
-//     margin-left: -35px;
-//   }
-//   .Stack-right {
-//     margin-right: -35px;
-//   } */
-
-//   @keyframes rotation {
-//     from {
-//       transform: rotate(0deg);
-//     }
-//     to {
-//       transform: rotate(360deg);
-//     }
-//   }
-// `;

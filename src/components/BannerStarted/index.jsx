@@ -10,7 +10,12 @@ export default function BannerStarted(props) {
         <span>{subtitle}</span>
       </div>
       <img src="assets/line_banner.svg" />
-      <Button bgColor="#C7DEFF" childrenColor="#552EE5" shadow={true}>
+      <Button
+        bgColor="#C7DEFF"
+        bgHover="#ebf3ff"
+        childrenColor="#552EE5"
+        shadow={true}
+      >
         {button}
       </Button>
     </Banner>

@@ -13,7 +13,7 @@ export default function Menu(props) {
         <div className="content-menu">
           {item.menu &&
             item.menu.map((item, index) => <a key={index}>{item}</a>)}
-          <Button>{item.button}</Button>
+          <Button bgHover="#552EE5">{item.button}</Button>
         </div>
         <div className="content-menu-responsive">
           <img src="assets/menu.svg" />

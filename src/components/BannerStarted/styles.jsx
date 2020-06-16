@@ -15,8 +15,8 @@ export const Banner = styled.div`
   align-items: center;
 
   img {
-    width: 100%;
-    max-width: 502px;
+    width: 0%;
+    transition: 3s;
   }
 
   span {
@@ -24,6 +24,12 @@ export const Banner = styled.div`
     font-size: 14px;
     line-height: 16px;
     opacity: 0.8;
+  }
+  &:hover {
+    img {
+      width: 100%;
+      max-width: 502px;
+    }
   }
   @media ${({ theme }) => theme.breakpoint.mobileL} {
     max-width: 600px;

@@ -23,7 +23,11 @@ export default function AwardsSection(props) {
                   <Item key={index}>
                     <div className="circle">
                       <strong id="years">{element.years}</strong>
-                      <strong id="local">{element.local}</strong>
+                      <strong
+                        className={index == 1 ? "local fontSize" : "local"}
+                      >
+                        {element.local}
+                      </strong>
                       <strong id="awards">{element.awards}</strong>
                     </div>
                   </Item>
@@ -54,7 +58,7 @@ export default function AwardsSection(props) {
                   <Item key={index}>
                     <div className="circle">
                       <strong id="years">{element.years}</strong>
-                      <strong id="local">{element.local}</strong>
+                      <strong className="local">{element.local}</strong>
                       <strong id="awards">{element.awards}</strong>
                     </div>
                   </Item>

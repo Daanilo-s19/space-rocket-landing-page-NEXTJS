@@ -32,6 +32,7 @@ export const AllCases = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    cursor: pointer;
 
     span {
       /* width: 151px; */
@@ -40,7 +41,7 @@ export const AllCases = styled.div`
       letter-spacing: 0.12em;
       margin-bottom: 8px;
       text-transform: uppercase;
-      /* text-align: center; */
+      cursor: pointer;
       background: -webkit-linear-gradient(
         10.34deg,
         #552ee5 14.56%,
@@ -48,6 +49,16 @@ export const AllCases = styled.div`
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+    img {
+      width: 76px;
+      transition: 500ms;
+    }
+
+    &:hover {
+      img {
+        width: 157px;
+      }
     }
   }
   @media ${({ theme }) => theme.breakpoint.mobileL} {

@@ -21,7 +21,7 @@ export default function SocialMedia(props) {
         target="_blank"
         href="https://www.youtube.com/channel/UCdmarg0cs15KKPPjc2dpGnQ"
       >
-        <img src="assets/youtube.svg" />
+        <img src="assets/youtube.svg" fill="#552ee5" />
       </a>
       <a target="_blank" href="https://blog.spacerocket.com.br/">
         <img src="assets/blog.svg" />

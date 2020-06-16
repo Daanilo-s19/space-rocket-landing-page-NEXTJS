@@ -84,6 +84,16 @@ export const Item = styled.div`
   width: 96px;
   height: 96px;
   background: url("assets/Ellipse.svg") bottom border-box no-repeat;
+  animation: spin 5s linear infinite;
+  transition: 3s;
+
+  &:hover {
+    animation: none;
+
+    .circle {
+      animation: none;
+    }
+  }
 
   .circle {
     width: 100%;
@@ -92,6 +102,9 @@ export const Item = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 9px;
+    animation: spinoff 5s linear infinite;
+    transition: 3s;
   }
 
   #years {
@@ -103,13 +116,16 @@ export const Item = styled.div`
     margin-top: 20px;
   }
 
-  #local {
+  .local {
     font-weight: 600;
     font-size: 9px;
     line-height: 11px;
     text-align: center;
     text-transform: uppercase;
     margin: 7px 0;
+  }
+  .fontSize {
+    font-size: 8px;
   }
   #awards {
     font-size: 8px;

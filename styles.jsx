@@ -97,6 +97,33 @@ export const Container = styled.div`
     line-height: 24px;
   }
 
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes spinoff {
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes antiRotation {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
   @media ${({ theme }) => theme.breakpoint.mobileL} {
     h3 {
       font-size: 10px;

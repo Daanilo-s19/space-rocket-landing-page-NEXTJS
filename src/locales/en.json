@@ -2,8 +2,8 @@
   "homepage": {
     "menu": {
       "item": {
-        "button": "Start a project",
-        "menu": ["Home", "Services", "About us", "Blog"]
+        "button": "Start a Project",
+        "menu": ["Home", "About us", "Blog"]
       }
     },
     "hero": {

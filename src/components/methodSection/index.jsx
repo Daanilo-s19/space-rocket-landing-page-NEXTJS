@@ -47,7 +47,7 @@ export default function MethodSection(props) {
               </div>
             </MethodItem>
           </div>
-          <div className="content-main">
+          <div className="content-main ">
             <div className="circle">
               <div className="play">
                 <img src="assets/method_play.svg" alt="" />

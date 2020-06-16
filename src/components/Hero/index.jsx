@@ -8,7 +8,12 @@ export default function Hero(props) {
     <Header>
       <h1>{title}</h1>
       <h2>{subtitle}</h2>
-      <Button bgColor="#552EE5" childrenColor="#F0F4FA" shadow={true}>
+      <Button
+        bgColor="#552EE5"
+        childrenColor="#F0F4FA"
+        shadow={true}
+        bgHover="#3e22a3"
+      >
         {textButton}
       </Button>
     </Header>
