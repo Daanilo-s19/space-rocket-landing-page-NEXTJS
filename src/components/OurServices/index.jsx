@@ -11,7 +11,7 @@ export default function ServicesSection(props) {
           item.map((element, index) => {
             return (
               <ItemService key={index}>
-                <img src={element.img} />
+                <img src={element.img} alt="image" />
                 <strong>{element.title}</strong>
                 <span>{element.subtitle}</span>
               </ItemService>

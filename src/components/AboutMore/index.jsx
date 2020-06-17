@@ -6,7 +6,7 @@ export default function AboutMore(props) {
   return (
     <MoreInformation>
       <label>{title}</label>
-      <img src="assets/case_more_information.svg" />
+      <img src="assets/case_more_information.svg" alt="more information" />
     </MoreInformation>
   );
 }

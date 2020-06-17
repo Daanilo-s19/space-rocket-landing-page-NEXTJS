@@ -13,7 +13,7 @@ export default function BannerStarted(props) {
           <h4>{title}</h4>
           <span>{subtitle}</span>
         </div>
-        <img src="assets/line_banner.svg" />
+        <img src="assets/line_banner.svg" alt="line banner" />
         <Button
           onClick={() => setForm(true)}
           bgColor="#C7DEFF"

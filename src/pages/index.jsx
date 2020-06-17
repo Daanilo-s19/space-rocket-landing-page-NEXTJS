@@ -12,12 +12,16 @@ export default function Home() {
   return (
     <>
       <Content>
-        <img src="assets/line_top_splash.svg" id="line-top" />
+        <img src="assets/line_top_splash.svg" id="line-top" alt="line splash" />
         <div id="logo">
-          <img src="assets/space_rocket_logo_splash.svg" />
+          <img src="assets/space_rocket_logo_splash.svg" alt="logo splash" />
           <label>Carregando...</label>
         </div>
-        <img src="assets/line_bottom_splash.svg" id="line-bottom" />
+        <img
+          src="assets/line_bottom_splash.svg"
+          id="line-bottom"
+          alt="line botto"
+        />
         <div className="footer">
           <SocialMedia />
           <label>oi@spacerocket.com.br</label>

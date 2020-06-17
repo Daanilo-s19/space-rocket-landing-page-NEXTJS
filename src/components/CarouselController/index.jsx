@@ -17,7 +17,7 @@ export default function CarouselController(props) {
         ) : (
           <>
             <span>{index}</span>
-            <img src="assets/line_controller.svg" />
+            <img src="assets/line_controller.svg" alt="line controller" />
             <span>{item.length}</span>
           </>
         )}
@@ -25,10 +25,10 @@ export default function CarouselController(props) {
 
       <div className="controllers">
         <div onClick={back}>
-          <img src="assets/arrow_left.svg" />
+          <img src="assets/arrow_left.svg" alt="arrow left" />
         </div>
         <div onClick={skip}>
-          <img src="assets/arrow_right.svg" />
+          <img src="assets/arrow_right.svg" alt="arrow right" />
         </div>
       </div>
     </Carousel>

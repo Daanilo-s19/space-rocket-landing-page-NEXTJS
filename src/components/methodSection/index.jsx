@@ -19,14 +19,14 @@ export default function MethodSection(props) {
                   <label>{method.method01.title}</label>
                 </div>
                 <div className="icon-item border-ellipse Stack-left">
-                  <img src={method.method01.img} alt="" />
+                  <img src={method.method01.img} alt="method" />
                 </div>
                 <div className="content-item-legend">
                   <label>{method.method03.description}</label>
                 </div>
               </div>
               <div id="line-top">
-                <img src="assets/line01.svg" alt="" />
+                <img src="assets/line01.svg" alt="line" />
               </div>
             </MethodItem>
             <MethodItem align="left">
@@ -36,32 +36,32 @@ export default function MethodSection(props) {
                   <label>{method.method02.title}</label>
                 </div>
                 <div className="icon-item border-ellipse">
-                  <img src={method.method02.img} alt="" />
+                  <img src={method.method02.img} alt="method" />
                 </div>
                 <div className="content-item-legend">
                   <label>{method.method03.description}</label>
                 </div>
               </div>
               <div id="line">
-                <img src="assets/line02.svg" alt="" />
+                <img src="assets/line02.svg" alt="line" />
               </div>
             </MethodItem>
           </div>
           <div className="content-main ">
             <div className="circle">
               <div className="play">
-                <img src="assets/method_play.svg" alt="" />
+                <img src="assets/method_play.svg" alt="method" />
               </div>
             </div>
           </div>
           <div className="content-right">
             <MethodItem align="right">
               <div id="line-top">
-                <img id="line" src="assets/line02.svg" alt="" />
+                <img id="line" src="assets/line02.svg" alt="line" />
               </div>
               <div className="content-item">
                 <div className="icon-item border-ellipse">
-                  <img src={method.method03.img} alt="" />
+                  <img src={method.method03.img} alt="method" />
                 </div>
                 <div className="description">
                   <label>{method.method03.title}</label>
@@ -73,10 +73,10 @@ export default function MethodSection(props) {
               </div>
             </MethodItem>
             <MethodItem align="right">
-              <img id="line" src="assets/line04.svg" alt="" />
+              <img id="line" src="assets/line04.svg" alt="line" />
               <div className="content-item">
                 <div className="icon-item border-ellipse">
-                  <img src={method.method04.img} alt="" />
+                  <img src={method.method04.img} alt="method" />
                 </div>
                 <div className="description">
                   <label>{method.method04.title}</label>

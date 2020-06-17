@@ -19,7 +19,7 @@ export default function CasesSection(props) {
         cases.map((element, index) => (
           <Cases key={index} order={index % 2 == 0 ? "true" : "false"}>
             <div className="content-image">
-              <img src={element.img} alt="" />
+              <img src={element.img} alt="image case" />
             </div>
             <div className="content-description">
               <h5>{element.tag}</h5>
@@ -47,24 +47,24 @@ export default function CasesSection(props) {
       )}
       <AllCases pageCases={pageCases}>
         <div className="project">
-          <img src="assets/google_grey.svg" />
+          <img src="assets/google_grey.svg" alt="cases" />
         </div>
         <div className="project">
-          <img src="assets/google_grey.svg" />
+          <img src="assets/google_grey.svg" alt="cases" />
         </div>
         <div className="project">
-          <img src="assets/google_grey.svg" />
+          <img src="assets/google_grey.svg" alt="cases" />
         </div>
         <div className="project">
-          <img src="assets/google_grey.svg" />
+          <img src="assets/google_grey.svg" alt="cases" />
         </div>
         {pageCases && (
           <>
             <div className="project">
-              <img src="assets/google_grey.svg" />
+              <img src="assets/google_grey.svg" alt="cases" />
             </div>
             <div className="project">
-              <img src="assets/google_grey.svg" />
+              <img src="assets/google_grey.svg" alt="cases" />
             </div>
           </>
         )}
@@ -73,7 +73,7 @@ export default function CasesSection(props) {
             <Link href="/Cases">
               <span>{allCases}</span>
             </Link>
-            <img src="assets/case_more_information.svg" />
+            <img src="assets/case_more_information.svg" alt="more cases" />
           </div>
         )}
       </AllCases>

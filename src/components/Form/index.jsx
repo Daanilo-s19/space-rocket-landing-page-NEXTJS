@@ -27,7 +27,7 @@ export default function Form(props) {
             <br /> perguntas e necessidades.
           </span>
           <div className="esc" onClick={() => onChange(false)}>
-            <img src="assets/esc_form.svg" />
+            <img src="assets/esc_form.svg" alt="esc form" />
           </div>
         </div>
         <label className={buttonError && project === "" && "error-label"}>

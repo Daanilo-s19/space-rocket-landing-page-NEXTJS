@@ -20,7 +20,7 @@ export default function CommentsSection(props) {
                 <div key={index} className="comments">
                   <p>{item.comments}</p>
                   <div className="legends">
-                    <img src={item.imageUser} />
+                    <img src={item.imageUser} alt=" image user" />
                     <div>
                       <label>{item.name}</label>
                       <span>{item.role}</span>

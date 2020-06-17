@@ -13,7 +13,7 @@ export default function Menu(props) {
       <Navbar>
         <div className="content">
           <div className="content-logo">
-            <img src="assets/logo.svg" />
+            <img src="assets/logo.svg" alt="logan" />
           </div>
           <div className="content-menu">
             {item.menu &&
@@ -27,7 +27,7 @@ export default function Menu(props) {
             </Button>
           </div>
           <div className="content-menu-responsive">
-            <img src="assets/menu.svg" />
+            <img src="assets/menu.svg" alt="menu" />
           </div>
         </div>
       </Navbar>

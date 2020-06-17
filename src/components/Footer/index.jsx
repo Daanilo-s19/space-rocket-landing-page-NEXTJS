@@ -8,7 +8,7 @@ export default function Footer(props) {
       <BorderTop />
       <Footerdefault>
         <div className="header">
-          <img id="slogan" src="assets/slogan.svg" />
+          <img id="slogan" src="assets/slogan.svg" alt="slogan" />
           <div className="content">
             <SocialMedia />
             <div className="content-menu">

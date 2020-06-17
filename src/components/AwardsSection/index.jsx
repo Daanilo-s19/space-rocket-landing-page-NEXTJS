@@ -11,7 +11,7 @@ export default function AwardsSection(props) {
           <h4>{subtitle}</h4>
         </div>
         <div className="border">
-          <img src="assets/gradient_responsive.svg" />
+          <img src="assets/gradient_responsive.svg" alt="gradient responsive" />
         </div>
       </div>
       <div className="content-item">
