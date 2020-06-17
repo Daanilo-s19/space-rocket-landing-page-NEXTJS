@@ -9,7 +9,10 @@ export default function CarouselController(props) {
       <div className="view-controller">
         {dots ? (
           item.map((dot, idx) => (
-            <div className={index === idx + 1 ? "dot-selected" : "dot"}></div>
+            <div
+              key={idx}
+              className={index === idx + 1 ? "dot-selected" : "dot"}
+            ></div>
           ))
         ) : (
           <>
@@ -37,5 +40,5 @@ CarouselController.propTypes = {
   item: PropTypes.array.isRequired,
   back: PropTypes.func.isRequired,
   skip: PropTypes.func.isRequired,
-  dots: PropTypes.bool,
+  dots: PropTypes.bool.isRequired,
 };

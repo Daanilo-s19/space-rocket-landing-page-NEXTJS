@@ -10,6 +10,6 @@ export default function AboutMore(props) {
     </MoreInformation>
   );
 }
-AboutMore.PropTypes = {
+AboutMore.propTypes = {
   title: PropTypes.string.isRequired,
 };

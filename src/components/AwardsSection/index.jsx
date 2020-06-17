@@ -19,8 +19,8 @@ export default function AwardsSection(props) {
           {item &&
             item.map((element, index) => {
               return (
-                <div>
-                  <Item key={index}>
+                <div key={index}>
+                  <Item>
                     <div className="circle">
                       <strong id="years">{element.years}</strong>
                       <strong
@@ -54,8 +54,8 @@ export default function AwardsSection(props) {
                   break;
               }
               return (
-                <div className={alignClass}>
-                  <Item key={index}>
+                <div key={index} className={alignClass}>
+                  <Item>
                     <div className="circle">
                       <strong id="years">{element.years}</strong>
                       <strong className="local">{element.local}</strong>
@@ -74,5 +74,5 @@ export default function AwardsSection(props) {
 AwardsSection.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
-  item: PropTypes.array.isRequired,
+  item: PropTypes.any.isRequired,
 };

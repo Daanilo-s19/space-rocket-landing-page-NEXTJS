@@ -19,7 +19,7 @@ export default function Button(props) {
 
 Button.propTypes = {
   onClick: PropTypes.func,
-  background: PropTypes.string.isRequired,
+  background: PropTypes.string,
   bgHover: PropTypes.string.isRequired,
   children: PropTypes.string.isRequired,
   childrenColor: PropTypes.string,

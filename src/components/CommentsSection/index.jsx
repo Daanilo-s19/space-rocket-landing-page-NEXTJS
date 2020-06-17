@@ -17,7 +17,7 @@ export default function CommentsSection(props) {
           comments.map((item, index) => {
             return (
               controller % comments.length === index && (
-                <div className="comments">
+                <div key={index} className="comments">
                   <p>{item.comments}</p>
                   <div className="legends">
                     <img src={item.imageUser} />
@@ -31,8 +31,9 @@ export default function CommentsSection(props) {
             );
           })}
         <CarouselController
-          index={(controller % comments.length) + 1}
-          item={comments}
+          index={(comments ? controller % comments.length : 0) + 1}
+          item={comments || []}
+          dots={false}
           back={() => setController(controller - 1)}
           skip={() => setController(controller + 1)}
         />
@@ -44,5 +45,5 @@ export default function CommentsSection(props) {
 CommentsSection.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
-  comments: PropTypes.array.isRequired,
+  comments: PropTypes.any.isRequired,
 };

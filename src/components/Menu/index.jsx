@@ -10,7 +10,6 @@ export default function Menu(props) {
   const [form, setForm] = useState(false);
   return (
     <>
-      {" "}
       <Navbar>
         <div className="content">
           <div className="content-logo">
@@ -23,10 +22,7 @@ export default function Menu(props) {
                   {item.name}
                 </a>
               ))}
-            <Button
-              onClick={() => setForm(true)}
-              bgHover={({ theme }) => theme.colorsButton.primary}
-            >
+            <Button onClick={() => setForm(true)} bgHover="#552ee5">
               {item.button}
             </Button>
           </div>
@@ -40,5 +36,5 @@ export default function Menu(props) {
   );
 }
 Menu.propTypes = {
-  item: PropTypes.array.isRequired,
+  item: PropTypes.object.isRequired,
 };

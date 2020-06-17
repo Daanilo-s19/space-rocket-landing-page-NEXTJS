@@ -24,5 +24,5 @@ export default function ServicesSection(props) {
 ServicesSection.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
-  item: PropTypes.array.isRequired,
+  item: PropTypes.any.isRequired,
 };

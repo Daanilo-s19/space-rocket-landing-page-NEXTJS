@@ -97,5 +97,5 @@ export default function MethodSection(props) {
 MethodSection.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
-  method: PropTypes.array.isRequired,
+  method: PropTypes.object.isRequired,
 };

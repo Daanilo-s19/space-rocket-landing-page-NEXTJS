@@ -8,6 +8,7 @@ import CarouselController from "../CarouselController";
 export default function BlogSection(props) {
   const { title, subtitle, more, blog } = props;
   const [controller, setController] = useState(1);
+
   return (
     <>
       <SectionDefault title={title} subtitle={subtitle}>
@@ -33,7 +34,7 @@ export default function BlogSection(props) {
       <Content>
         <CarouselController
           dots={true}
-          index={(controller % blog.length) + 1}
+          index={(blog ? controller % blog.length : 0) + 1}
           totalItem={blog.length}
           item={blog || []}
           back={() => setController(controller - 1)}
@@ -47,5 +48,5 @@ BlogSection.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   more: PropTypes.string,
-  blog: PropTypes.array.isRequired,
+  blog: PropTypes.any.isRequired,
 };

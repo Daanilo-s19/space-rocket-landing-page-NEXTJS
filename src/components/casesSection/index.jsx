@@ -28,7 +28,7 @@ export default function CasesSection(props) {
               <div className="divider">
                 <span>{element.description}</span>
               </div>
-              <AboutMore title=" Mais Informações" />
+              <AboutMore title="Mais Informações" />
             </div>
           </Cases>
         ))}
@@ -83,7 +83,7 @@ export default function CasesSection(props) {
 CasesSection.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
-  cases: PropTypes.array.isRequired,
+  cases: PropTypes.any.isRequired,
   pageCases: PropTypes.bool.isRequired,
   clients: PropTypes.string,
 };

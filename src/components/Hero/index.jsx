@@ -15,7 +15,7 @@ export default function Hero(props) {
 
       {activeButton && (
         <Button
-          bgColor={({ theme }) => theme.colorsButton.primary}
+          bgColor="#552ee5"
           childrenColor="#F0F4FA"
           shadow={true}
           bgHover="#3e22a3"
