@@ -40,7 +40,7 @@ export const Section = styled.section`
     grid-template-columns: 0 360px 0;
 
     .content-item {
-     
       grid-template-columns: 360px;
+    }
   }
 `;

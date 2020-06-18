@@ -76,7 +76,7 @@ export const Dropdown = styled.div`
   .content {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(200px);
-    animation: AnimatedContainer 200ms linear;
+    /* animation: AnimatedContainer 200ms linear; */
     display: grid;
     grid-auto-rows: minmax(auto, 104px);
     gap: 32px;

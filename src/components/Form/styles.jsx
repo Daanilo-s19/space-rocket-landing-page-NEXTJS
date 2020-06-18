@@ -166,4 +166,44 @@ export const Container = styled.div`
     text-transform: uppercase;
     color: #202c3d;
   }
+
+  @media ${({ theme }) => theme.breakpoint.mobileL} {
+    .content-button {
+      grid-template-columns: repeat(2, auto);
+      gap: 16px;
+    }
+    .content {
+      padding: 56px 48px;
+      width: 375px;
+      .header {
+        h4 {
+          font-size: 18px;
+          line-height: 21px;
+          width: 178px;
+        }
+        span {
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+    }
+    form {
+      .content-input {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+
+        span {
+          width: 92px;
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+
+      .group-send {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
 `;

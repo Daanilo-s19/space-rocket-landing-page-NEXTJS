@@ -127,7 +127,7 @@ export default function Form(props) {
             ref={register({ required: true })}
           />
 
-          <div className="content-input">
+          <div className="content-input group-send">
             <span>Quanto mais detalhes melhor!</span>
             <button type="submit">Enviar e-mail</button>
           </div>
