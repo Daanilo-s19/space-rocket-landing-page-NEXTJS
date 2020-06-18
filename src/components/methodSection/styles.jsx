@@ -88,7 +88,7 @@ export const Section = styled.section`
   }
 
   @media ${({ theme }) => theme.breakpoint.tablet} {
-    grid-template-columns: minmax(auto, 32px) 1fr minmax(auto, 32px);
+    grid-template-columns: minmax(0, 32px) 1fr minmax(0, 32px);
 
     .content {
       grid-row: 1/2;
@@ -114,7 +114,8 @@ export const Section = styled.section`
     }
   }
   @media ${({ theme }) => theme.breakpoint.mobileL} {
-    grid-template-columns: minmax(auto, 32px) 296px minmax(auto, 32px);
+    grid-template-columns: 0 360px 0;
+    justify-items: center;
   }
 `;
 

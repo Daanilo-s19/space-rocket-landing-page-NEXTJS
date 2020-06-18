@@ -11,7 +11,7 @@ export default function MethodSection(props) {
     <>
       <div className="content-center-header">
         <h3>{title}</h3>
-        <h4 style={{ maxWidth: "551px" }}>{subtitle}</h4>
+        <h4 style={{ maxWidth: "296px" }}>{subtitle}</h4>
       </div>
       <Section>
         <div className="content">
@@ -51,6 +51,7 @@ export default function MethodSection(props) {
               </div>
             </MethodItem>
           </div>
+
           <div className="content-main ">
             <div className="circle">
               <div className="play" onClick={() => setPlay(true)}>

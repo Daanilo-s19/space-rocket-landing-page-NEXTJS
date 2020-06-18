@@ -8,6 +8,7 @@ export const Banner = styled.div`
   border-radius: 10px;
   margin: 76px auto 132px;
   padding: 0 56px;
+  border-radius: 10px;
 
   display: grid;
   grid-template-columns: 3fr 5fr 1fr;
@@ -32,19 +33,39 @@ export const Banner = styled.div`
     }
   }
   @media ${({ theme }) => theme.breakpoint.mobileL} {
-    max-width: 600px;
-    height: 200px;
+    width: 296px;
+    height: 380px;
     justify-items: center;
-    border-radius: 0px;
+    border-radius: 10px;
+    padding: 0;
 
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto 1fr;
+    grid-template-rows: 1fr 96px 1fr;
+
+    img {
+      max-width: 100px;
+      transition: 3s;
+      transform: rotate(90deg);
+    }
+
+    button {
+      margin-top: 32px;
+      align-self: center;
+    }
 
     div {
       text-align: center;
     }
     h4 {
-      width: auto;
+      font-size: 20px;
+      line-height: 24px;
+      width: 182px;
+    }
+
+    &:hover {
+      img {
+        width: 50%;
+      }
     }
   }
 `;

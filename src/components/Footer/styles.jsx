@@ -107,4 +107,38 @@ export const Footerdefault = styled.div`
       }
     }
   }
+
+  @media ${({ theme }) => theme.breakpoint.mobileL} {
+    .header {
+      #slogan {
+        max-width: 296px;
+        height: 170px;
+      }
+    }
+    .content-menu {
+      justify-self: start;
+      display: flex;
+      flex-direction: column;
+      a {
+        margin-bottom: 20px;
+      }
+    }
+    .content-tag {
+      justify-self: start;
+    }
+    .copyright {
+      height: 0;
+      justify-self: center;
+      display: flex;
+      flex-direction: column;
+
+      span {
+        margin: 20px;
+      }
+
+      span:first-child {
+        margin-top: 32px;
+      }
+    }
+  }
 `;

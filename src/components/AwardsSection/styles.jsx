@@ -87,8 +87,13 @@ export const Section = styled.section`
   }
 
   @media ${({ theme }) => theme.breakpoint.mobileL} {
+    justify-items: center;
+
+    max-width: 375px;
     .content-header {
       margin: 0;
+      justify-self: center;
+      grid-template-columns: 0 296px 0;
 
       .border {
         width: 296px;
@@ -96,6 +101,12 @@ export const Section = styled.section`
         img {
           width: 100%;
         }
+      }
+    }
+    .content-item {
+      grid-template-columns: 0 296px 0;
+
+      .content-alignment-responsive {
       }
     }
   }

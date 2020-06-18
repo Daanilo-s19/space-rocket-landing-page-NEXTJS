@@ -49,4 +49,9 @@ export const ItemPress = styled.div`
       opacity: 0.8;
     }
   }
+
+  @media ${({ theme }) => theme.breakpoint.mobileL} {
+    width: 296px;
+    height: auto;
+  }
 `;

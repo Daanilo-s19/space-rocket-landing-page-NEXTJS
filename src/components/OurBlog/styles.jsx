@@ -5,6 +5,26 @@ export const Content = styled.div`
   padding: 0 123px;
   display: grid;
   grid-auto-rows: auto;
+
+  .content-web {
+    display: block;
+  }
+  .content-mobile {
+    display: none;
+  }
+
+  @media ${({ theme }) => theme.breakpoint.tablet} {
+    .content-web {
+      display: none;
+    }
+    .content-mobile {
+      display: block;
+    }
+  }
+  @media ${({ theme }) => theme.breakpoint.mobileL} {
+    max-width: 375px;
+    padding: 0;
+  }
 `;
 export const ItemBlog = styled.div`
   max-width: 352px;
@@ -64,5 +84,9 @@ export const ItemBlog = styled.div`
       mix-blend-mode: normal;
       opacity: 0.8;
     }
+  }
+  @media ${({ theme }) => theme.breakpoint.mobileL} {
+    width: 296px;
+    height: auto;
   }
 `;

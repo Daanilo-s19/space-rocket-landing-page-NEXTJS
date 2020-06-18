@@ -13,6 +13,13 @@ export const Section = styled.section`
     column-gap: 36px;
   }
 
+  .content-web {
+    display: block;
+  }
+  .content-mobile {
+    display: none;
+  }
+
   @media ${({ theme }) => theme.breakpoint.tablet} {
     grid-template-columns: 32px 1fr 32px;
     .content-item {
@@ -22,5 +29,18 @@ export const Section = styled.section`
       justify-items: center;
       row-gap: 36px;
     }
+    .content-web {
+      display: none;
+    }
+    .content-mobile {
+      display: block;
+    }
+  }
+  @media ${({ theme }) => theme.breakpoint.tablet} {
+    grid-template-columns: 0 360px 0;
+
+    .content-item {
+     
+      grid-template-columns: 360px;
   }
 `;

@@ -143,6 +143,8 @@ export const Container = styled.div`
   }
 
   @media ${({ theme }) => theme.breakpoint.mobileL} {
+    margin: 0;
+
     h3 {
       font-size: 10px;
       line-height: 12px;
