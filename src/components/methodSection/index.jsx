@@ -26,7 +26,7 @@ export default function MethodSection(props) {
                   <img src={method.method01.img} alt="method" />
                 </div>
                 <div className="content-item-legend">
-                  <label>{method.method03.description}</label>
+                  <label>{method.method01.description}</label>
                 </div>
               </div>
               <div id="line-top">
@@ -43,7 +43,7 @@ export default function MethodSection(props) {
                   <img src={method.method02.img} alt="method" />
                 </div>
                 <div className="content-item-legend">
-                  <label>{method.method03.description}</label>
+                  <label>{method.method02.description}</label>
                 </div>
               </div>
               <div id="line">
@@ -88,7 +88,7 @@ export default function MethodSection(props) {
                   <label className="id-item">04</label>
                 </div>
                 <div className="content-item-legend">
-                  <label>{method.method03.description}</label>
+                  <label>{method.method04.description}</label>
                 </div>
               </div>
             </MethodItem>
@@ -100,7 +100,7 @@ export default function MethodSection(props) {
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/UlFNy9iWrpE"
+            src="https://www.youtube.com/embed/6raPNl-mfaI"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen

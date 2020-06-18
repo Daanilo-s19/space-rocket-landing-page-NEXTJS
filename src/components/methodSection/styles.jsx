@@ -194,7 +194,7 @@ export const MethodItem = styled.div`
   .content-item-legend {
     opacity: 0;
     grid-column: 1/3;
-    padding-top: 16px;
+    padding-top: 50px;
     max-width: 288px;
     height: 42px;
     font-size: 12px;

@@ -4,7 +4,7 @@
       "item": {
         "button": "Comece um Projeto",
         "menu": [
-          { "link": "/homePage", "name": "Início" },
+          { "link": "/HomePage", "name": "Início" },
 
           { "link": "#", "name": "Blog" }
         ]
@@ -73,11 +73,11 @@
       "method": {
         "method01": {
           "title": "Reunião Exploratória",
-          "description": ""
+          "description": "Aqui entendemos a sua necessidade por completo levantando soluções e questionamentos para dar direcionamento às próximas etapas do projeto, sempre visando em criar a melhor solução para seu negócio"
         },
         "method02": {
           "title": "Criação do design",
-          "description": ""
+          "description": "Criamos um visual único para sua solução, visando sempre transmitir o seu negócio no seu software. Nessa etapa realizamos o design da interface, pensando na harmonia dos elementos e em um fácil utilização para os usuários"
         },
         "method03": {
           "title": "Desenvolvimento",
@@ -85,7 +85,7 @@
         },
         "method04": {
           "title": "Entrega e Feedback",
-          "description": "Nessa etapa sua ideia será analisada a fundo onde será estabelecido todas as etapas do fluxo do projeto para os próximos passos."
+          "description": "Aqui você acompanha de perto tudo que está sendo feito, trazendo o cliente para dentro do processo de desenvolvimento e sempre validando com ele as etapas para os próximos passos          "
         }
       }
     },

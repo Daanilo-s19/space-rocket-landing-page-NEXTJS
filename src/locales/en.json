@@ -4,7 +4,7 @@
       "item": {
         "button": "Start a Project",
         "menu": [
-          { "link": "/homePage", "name": "Home" },
+          { "link": "/HomePage", "name": "Home" },
 
           { "link": "#", "name": "Blog" }
         ]
