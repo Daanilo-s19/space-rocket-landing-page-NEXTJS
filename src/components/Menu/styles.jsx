@@ -71,29 +71,68 @@ export const Dropdown = styled.div`
   -moz-transition: opacity 100ms ease-in;
   transition: opacity 100ms ease-in;
   display: grid;
-  grid-template-rows: minmax(auto, 571px) 1fr;
-
-  .opacity {
-    background: rgba(255, 255, 255, 0.1);
-
-    backdrop-filter: blur(6px);
-  }
+  grid-template-rows: 1fr;
 
   .content {
-    padding: 56px 48px;
-    width: 100%;
-    background: #ffffff;
-    box-shadow: 10px 0px 10px rgba(22, 16, 65, 0.3);
-    border-radius: 0 0 80px 80px;
-    animation: AnimatedContainer 300ms linear;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(200px);
+    animation: AnimatedContainer 200ms linear;
+    display: grid;
+    grid-auto-rows: minmax(auto, 104px);
+    gap: 32px;
+
+    .header {
+      display: grid;
+      max-width: 375px;
+
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 32px 32px 0;
+      #logo {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        align-self: start;
+      }
+      #menu {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        justify-self: end;
+        align-self: start;
+      }
+    }
+
+    .content-menu {
+      padding: 0 0 0 32px;
+      display: flex;
+      flex-direction: column;
+
+      /* button {
+        height: 44px;
+      } */
+
+      a {
+        font-size: 18px;
+        line-height: 21px;
+        opacity: 0.7;
+        margin-bottom: 32px;
+        transition: 0.5s;
+        color: #fff;
+        &:hover {
+          opacity: 1;
+          cursor: pointer;
+        }
+      }
+    }
+    button {
+      margin: 0 0 0 32px;
+    }
   }
 
   @keyframes AnimatedContainer {
     from {
-      height: 0%;
+      backdrop-filter: blur(0px);
     }
     to {
-      height: 100%;
+      backdrop-filter: blur(200px);
     }
   }
 `;
