@@ -67,6 +67,8 @@ export const Dropdown = styled.div`
   position: fixed;
   top: 0;
   z-index: 99999;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(200px);
   -webkit-transition: opacity 100ms ease-in;
   -moz-transition: opacity 100ms ease-in;
   transition: opacity 100ms ease-in;
@@ -74,9 +76,10 @@ export const Dropdown = styled.div`
   grid-template-rows: 1fr;
 
   .content {
-    background: rgba(255, 255, 255, 0.1);
+    z-index: 99999;
+    background: ${({ theme }) => theme.background.primary};
     backdrop-filter: blur(200px);
-    /* animation: AnimatedContainer 200ms linear; */
+    animation: AnimatedContainer 200ms linear;
     display: grid;
     grid-auto-rows: minmax(auto, 104px);
     gap: 32px;
