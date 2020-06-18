@@ -107,7 +107,6 @@ export default function Home() {
           more={i18n.t("homepage.pressSection.more")}
           item={i18n.t("homepage.pressSection.item")}
         />
-
         <BlogSection
           title={i18n.t("homepage.blogSection.title")}
           subtitle={i18n.t("homepage.blogSection.subtitle")}

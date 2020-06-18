@@ -44,7 +44,7 @@ export const Navbar = styled.nav`
     display: none;
   }
 
-  @media ${({ theme }) => theme.breakpoint.laptop} {
+  @media ${({ theme }) => theme.breakpoint.tablet} {
     .content-menu {
       display: none;
     }
@@ -57,6 +57,43 @@ export const Navbar = styled.nav`
   @media ${({ theme }) => theme.breakpoint.tablet} {
     .content {
       grid-template-columns: 32px 1fr 3fr 32px;
+    }
+  }
+`;
+
+export const Dropdown = styled.div`
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+  -webkit-transition: opacity 100ms ease-in;
+  -moz-transition: opacity 100ms ease-in;
+  transition: opacity 100ms ease-in;
+  display: grid;
+  grid-template-rows: minmax(auto, 571px) 1fr;
+
+  .opacity {
+    background: rgba(255, 255, 255, 0.1);
+
+    backdrop-filter: blur(6px);
+  }
+
+  .content {
+    padding: 56px 48px;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 10px 0px 10px rgba(22, 16, 65, 0.3);
+    border-radius: 0 0 80px 80px;
+    animation: AnimatedContainer 300ms linear;
+  }
+
+  @keyframes AnimatedContainer {
+    from {
+      height: 0%;
+    }
+    to {
+      height: 100%;
     }
   }
 `;

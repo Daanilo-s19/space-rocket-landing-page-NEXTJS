@@ -69,12 +69,33 @@ export const Section = styled.section`
     .content-header {
       margin: 0 32px;
       display: grid;
-      grid-template-columns: 0px 1fr 0px;
+      grid-template-columns: minmax(auto, 32px) 1fr minmax(auto, 32px);
       grid-template-rows: repeat(2, 1fr);
+
+      .title {
+        width: 100%;
+        h4 {
+          width: 296px;
+        }
+      }
 
       .border {
         grid-column: 2/3;
         grid-row: 2/3;
+      }
+    }
+  }
+
+  @media ${({ theme }) => theme.breakpoint.mobileL} {
+    .content-header {
+      margin: 0;
+
+      .border {
+        width: 296px;
+
+        img {
+          width: 100%;
+        }
       }
     }
   }

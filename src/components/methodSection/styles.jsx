@@ -27,11 +27,9 @@ export const Section = styled.section`
     align-items: center;
 
     &:hover {
-      animation: none;
+      animation-play-state: paused;
       .circle {
-        animation: none;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
+        animation-play-state: paused;
       }
     }
 
@@ -90,7 +88,7 @@ export const Section = styled.section`
   }
 
   @media ${({ theme }) => theme.breakpoint.tablet} {
-    grid-template-columns: 32px 1fr 32px;
+    grid-template-columns: minmax(auto, 32px) 1fr minmax(auto, 32px);
 
     .content {
       grid-row: 1/2;
@@ -114,6 +112,9 @@ export const Section = styled.section`
       grid-template-rows: 1fr;
       justify-items: center;
     }
+  }
+  @media ${({ theme }) => theme.breakpoint.mobileL} {
+    grid-template-columns: minmax(auto, 32px) 296px minmax(auto, 32px);
   }
 `;
 
@@ -146,6 +147,7 @@ export const MethodItem = styled.div`
     .description {
       max-width: 206px;
       align-self: center;
+      margin-bottom: 8px;
       justify-self: ${(props) => (props.align === "left" ? "start" : "end")};
 
       .id-item {

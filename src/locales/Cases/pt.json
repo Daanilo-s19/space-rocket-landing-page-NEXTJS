@@ -4,7 +4,7 @@
       "button": "Comece um Projeto",
       "menu": [
         { "link": "/homePage", "name": "Início" },
-        { "link": "#", "name": "Sobre nós" },
+
         { "link": "#", "name": "Blog" }
       ]
     }

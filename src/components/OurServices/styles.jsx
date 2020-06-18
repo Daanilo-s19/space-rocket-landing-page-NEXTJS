@@ -37,4 +37,8 @@ export const ItemService = styled.div`
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
   }
+  @media ${({ theme }) => theme.breakpoint.mobileL} {
+    max-width: 296px;
+    height: 273px;
+  }
 `;

@@ -1,8 +1,12 @@
+import { useState } from "react";
 import PropTypes from "prop-types";
+import Modal from "../Modal";
 import { Section, MethodItem } from "./styles";
 
 export default function MethodSection(props) {
   const { title, subtitle, method } = props;
+  const [play, setPlay] = useState(false);
+
   return (
     <>
       <div className="content-center-header">
@@ -49,7 +53,7 @@ export default function MethodSection(props) {
           </div>
           <div className="content-main ">
             <div className="circle">
-              <div className="play">
+              <div className="play" onClick={() => setPlay(true)}>
                 <img src="assets/method_play.svg" alt="method" />
               </div>
             </div>
@@ -90,6 +94,18 @@ export default function MethodSection(props) {
           </div>
         </div>
       </Section>
+      {play && (
+        <Modal onChange={(value) => setPlay(value)}>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/UlFNy9iWrpE"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </Modal>
+      )}
     </>
   );
 }

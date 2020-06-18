@@ -67,7 +67,6 @@ export default function AwardsSection(props) {
             })}
         </div>
       </div>
-      {/* <ParticlesBackGround /> */}
     </Section>
   );
 }

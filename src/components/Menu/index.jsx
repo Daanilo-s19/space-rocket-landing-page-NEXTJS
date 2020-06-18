@@ -3,10 +3,11 @@ import { useState } from "react";
 import Form from "../Form";
 import Button from "../Button";
 import PropTypes from "prop-types";
-import { Navbar } from "./styles";
+import { Navbar, Dropdown } from "./styles";
 
 export default function Menu(props) {
   const { item } = props;
+  const [menuDropdown, setMenuDropdown] = useState(false);
   const [form, setForm] = useState(false);
   return (
     <>
@@ -27,10 +28,20 @@ export default function Menu(props) {
             </Button>
           </div>
           <div className="content-menu-responsive">
-            <img src="assets/menu.svg" alt="menu" />
+            <img
+              src="assets/menu.svg"
+              alt="menu"
+              onClick={() => setMenuDropdown(true)}
+            />
           </div>
         </div>
       </Navbar>
+      {menuDropdown && (
+        <Dropdown onChange={(value) => setMenuDropdown(value)}>
+          <div className="content"></div>
+          <div className="opacity" onClick={() => onChange(false)}></div>
+        </Dropdown>
+      )}
       {form && <Form onChange={(value) => setForm(value)} />}
     </>
   );
