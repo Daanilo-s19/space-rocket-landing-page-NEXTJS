@@ -7,6 +7,8 @@ export const Header = styled.header`
   align-items: center;
   margin-top: 176px;
 
+  background: url("assets/filter_space.svg");
+
   h1 {
     width: 100%;
     max-width: 544px;
