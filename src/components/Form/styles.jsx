@@ -49,6 +49,9 @@ export const Container = styled.div`
     h4 {
       grid-column: 1/2;
       color: #202c3d;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
       margin-bottom: 12px;
     }
     span {
@@ -77,8 +80,8 @@ export const Container = styled.div`
       border-radius: 100px;
       background: #ffffff;
       color: #53647a;
-      font-size: 10px;
-      line-height: 12px;
+      font-size: 12px;
+      line-height: 15px;
       font-weight: bold;
       transition: 500ms;
       cursor: pointer;
@@ -162,10 +165,9 @@ export const Container = styled.div`
   }
 
   label {
-    font-size: 10px;
-    line-height: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
     color: #202c3d;
   }
 

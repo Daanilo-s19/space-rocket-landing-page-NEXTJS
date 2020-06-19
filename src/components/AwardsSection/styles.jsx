@@ -125,8 +125,8 @@ export const Section = styled.section`
 `;
 
 export const Item = styled.div`
-  width: 96px;
-  height: 96px;
+  width: 132px;
+  height: 132px;
   background: -webkit-linear-gradient(10.34deg, #552ee5 14.56%, #ee5a59 85.55%);
   border-radius: 50%;
   animation: spin 5s linear infinite;
@@ -136,18 +136,18 @@ export const Item = styled.div`
   justify-content: center;
 
   &:hover {
-    animation: none;
+    animation-play-state: paused;
 
     .circle {
-      animation: none;
+      animation-play-state: paused;
     }
   }
 
   .circle {
     background: #1b1b34;
     border-radius: 50%;
-    width: 94px;
-    height: 94px;
+    width: 130px;
+    height: 130px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -159,8 +159,8 @@ export const Item = styled.div`
 
   #years {
     font-weight: 500;
-    font-size: 8px;
-    line-height: 9px;
+    font-size: 10px;
+    line-height: 12px;
     letter-spacing: 0.08em;
     color: ${({ theme }) => theme.colors.primary};
     margin-top: 20px;
@@ -168,18 +168,18 @@ export const Item = styled.div`
 
   .local {
     font-weight: 600;
-    font-size: 9px;
-    line-height: 11px;
+    font-size: 12px;
+    line-height: 14px;
     text-align: center;
     text-transform: uppercase;
     margin: 7px 0;
   }
   .fontSize {
-    font-size: 8px;
+    font-size: 11px;
   }
   #awards {
-    font-size: 8px;
-    line-height: 9px;
+    font-size: 10px;
+    line-height: 12px;
     letter-spacing: 0.08em;
     color: #ffffff;
     opacity: 0.8;
@@ -193,6 +193,23 @@ export const Item = styled.div`
     .circle {
       width: 84px;
       height: 84px;
+    }
+
+    #years {
+      font-size: 8px;
+      line-height: 9px;
+    }
+
+    .local {
+      font-size: 9px;
+      line-height: 11px;
+    }
+    .fontSize {
+      font-size: 5 px;
+    }
+    #awards {
+      font-size: 8px;
+      line-height: 9px;
     }
   }
   @media ${({ theme }) => theme.breakpoint.mobileS} {
