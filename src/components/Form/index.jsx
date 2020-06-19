@@ -31,7 +31,7 @@ export default function Form(props) {
           </div>
         </div>
         <label className={buttonError && project === "" && "error-label"}>
-          Qual Projeto você que realizar?*
+          Qual Projeto você que realizar?
         </label>
         <div className="content-button">
           <button
@@ -60,7 +60,7 @@ export default function Form(props) {
           </button>
         </div>
         <label className={buttonError && project === "" && "error-label"}>
-          Quanto você pretende investir no seu projeto?*
+          Quanto você pretende investir no seu projeto?
         </label>
         <div className="content-button">
           <button
