@@ -9,7 +9,6 @@ export const Footerdefault = styled.div`
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
-  background: url("assets/filter_space.svg");
 
   display: grid;
   grid-auto-rows: auto;

@@ -4,7 +4,6 @@ export const Section = styled.section`
   display: grid;
   grid-template-columns: minmax(auto, 155px) 1fr minmax(auto, 155px);
   margin: 56px 0 181px;
-  background: url("assets/filter_space.svg");
 
   .content {
     grid-column: 2/3;

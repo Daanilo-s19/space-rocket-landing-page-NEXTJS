@@ -5,7 +5,6 @@ export const Section = styled.div`
   max-width: 736px;
   height: 208px;
   margin: 56px auto 132px;
-  background: url("assets/filter_space.svg");
 
   display: grid;
   grid-auto-flow: 1fr;
