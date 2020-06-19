@@ -11,7 +11,7 @@ export default class MyApp extends App {
       <ThemeProvider theme={theme}>
         <Head>
           <title>Space Rocket</title>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/favicon_space.svg" />
           <link
             rel="stylesheet"
             type="text/css"

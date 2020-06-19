@@ -81,6 +81,7 @@ export const Container = styled.div`
       line-height: 12px;
       font-weight: bold;
       transition: 500ms;
+      cursor: pointer;
 
       &:hover {
         color: #ffffff;
@@ -115,7 +116,7 @@ export const Container = styled.div`
       border: 1px solid #ebeff5;
       box-sizing: border-box;
       border-radius: 8px;
-
+      cursor: pointer;
       font-size: 12px;
       line-height: 22px;
       color: #53647a;
@@ -147,6 +148,7 @@ export const Container = styled.div`
       box-shadow: 0px 10px 25px rgba(85, 46, 229, 0.32);
       border-radius: 100px;
       color: #fff;
+      cursor: pointer;
     }
   }
 

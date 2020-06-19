@@ -6,6 +6,7 @@ export const ItemPress = styled.div`
   box-sizing: border-box;
   backdrop-filter: blur(20px);
   border-radius: 10px;
+  cursor: pointer;
 
   .filter {
     width: 100%;
@@ -25,6 +26,7 @@ export const ItemPress = styled.div`
       font-weight: 600;
       font-size: 14px;
       line-height: 17px;
+      color: #ffffff;
     }
     p {
       font-size: 12px;

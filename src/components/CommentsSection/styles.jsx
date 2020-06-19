@@ -35,6 +35,23 @@ export const Section = styled.div`
       display: flex;
       align-items: center;
 
+      .circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 16px;
+
+        img {
+          border-radius: 50%;
+          width: 36px;
+          height: 36px;
+        }
+      }
+
       div {
         display: flex;
         flex-direction: column;

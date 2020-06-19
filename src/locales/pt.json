@@ -6,7 +6,7 @@
         "menu": [
           { "link": "/HomePage", "name": "Início" },
 
-          { "link": "#", "name": "Blog" }
+          { "link": "https://blog.spacerocket.com.br/", "name": "Blog" }
         ]
       }
     },
@@ -69,7 +69,7 @@
     },
     "methodSection": {
       "title": "Metodologia",
-      "subtitle": "Disponibilizamos de um processo simplificado do desenvolvimento da sua solução:",
+      "subtitle": "Disponibilizamos um processo ágil para desenvolver a sua solução:",
       "method": {
         "method01": {
           "title": "Reunião Exploratória",
@@ -77,15 +77,15 @@
         },
         "method02": {
           "title": "Criação do design",
-          "description": "Criamos um visual único para sua solução, visando sempre transmitir o seu negócio no seu software. Nessa etapa realizamos o design da interface, pensando na harmonia dos elementos e em um fácil utilização para os usuários"
+          "description": "Criamos um visual único para sua solução, visando sempre transmitir o seu negócio no seu software. Nessa etapa realizamos o design da interface, pensando na harmonia dos elementos e na melhor experiência para o seu usuário."
         },
         "method03": {
           "title": "Desenvolvimento",
-          "description": "Nessa etapa sua ideia será analisada a fundo onde será estabelecido todas as etapas do fluxo do projeto para os próximos passos."
+          "description": "Aqui você acompanha de perto tudo que está sendo feito, trazendo o cliente para dentro do processo de desenvolvimento e sempre validando com ele as etapas para os próximos passos          "
         },
         "method04": {
           "title": "Entrega e Feedback",
-          "description": "Aqui você acompanha de perto tudo que está sendo feito, trazendo o cliente para dentro do processo de desenvolvimento e sempre validando com ele as etapas para os próximos passos          "
+          "description": "Voila! O seu projeto está pronto para entrar no ar."
         }
       }
     },
@@ -128,16 +128,16 @@
           "comments": "Gosto sempre de trabalhar com a turma. Sempre fazem um bom trabalho e as coisas funcionam bem."
         },
         {
-          "imageUser": "assets/user_default.svg",
-          "name": "Danilo",
-          "role": "Dev",
-          "comments": "Os caras são fodas d++"
+          "imageUser": "assets/comments/juan_torres.jpg",
+          "name": "Juan Torres",
+          "role": "(Coordenador de Inovação Correio da Bahia) - Leitor Pauteiro",
+          "comments": "O projeto atendeu as expectativas por um motivo muito simples eq ue é determinante para um processo de trabalho de inovação: o produto final tem todos osatributos que foram prometidos no início do trabalho."
         },
         {
-          "imageUser": "assets/user_default.svg",
-          "name": "José",
-          "role": "Dev",
-          "comments": "Bacaaana"
+          "imageUser": "assets/comments/gloria_canto.jpeg",
+          "name": "Glória Canto",
+          "role": "(Doutora Em Fonoaudiologia) - Dizziness App",
+          "comments": "O aplicativo tem trazido resultados importantes para os meus pacientes ajudando-os em sua recuperação. Uso todo os dias em meu consultório, um trabalho excelente!"
         }
       ]
     },
@@ -150,17 +150,20 @@
           {
             "img": "assets/press/image01.svg",
             "title": "Leitor pauteiro: vencedor do Correio de...",
-            "description": "A ideia é que você, leitor, possa enviar sugestões de pautas e acumule pontos pelas ideias. Um robô organizará as propostas e oferecerá as melhores opções para o repórter, a depender da editoria... "
+            "description": "A ideia é que você, leitor, possa enviar sugestões de pautas e acumule pontos pelas ideias. Um robô organizará as propostas e oferecerá as melhores opções para o repórter, a depender da editoria... ",
+            "link": "https://www.correio24horas.com.br/noticia/nid/leitor-pauteiro-vencedor-do-correio-de-futuro-propoe-novas-formas-de-reportar/"
           },
           {
             "img": "assets/press/image02.svg",
             "title": "Com cerca de 80 mil visitantes, Campus...",
-            "description": "A Campus Party Bahia, que terminou neste domingo (13), na Arena Fonte Nova, em Salvador, atraiu público de 80 mil visitantes desde a quarta-feira (9), além dos seis mil “campuseiros” que..."
+            "description": "A Campus Party Bahia, que terminou neste domingo (13), na Arena Fonte Nova, em Salvador, atraiu público de 80 mil visitantes desde a quarta-feira (9), além dos seis mil “campuseiros” que...",
+            "link": "https://globoplay.globo.com/v/6748658/"
           },
           {
             "img": "assets/press/image03.svg",
             "title": "Tecnologia e inovação: Campus Party...",
-            "description": "Evento mistura tecnologia, inovação, educação e empreendedorismo."
+            "description": "Evento mistura tecnologia, inovação, educação e empreendedorismo.",
+            "link": " https://g1.globo.com/bahia/noticia/com-cerca-de-80-mil-visitantes-campus-party-bahia-atinge-publico-recorde-de-edicoes-regionais.ghtml"
           }
         ]
       ]

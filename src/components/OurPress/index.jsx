@@ -7,6 +7,7 @@ import { useState } from "react";
 export default function PressSection(props) {
   const { title, subtitle, item, more } = props;
   const [controller, setController] = useState(1);
+  console.log(item);
   return (
     <SectionDefault title={title} subtitle={subtitle}>
       {item &&
@@ -15,14 +16,16 @@ export default function PressSection(props) {
             controller % item.length === index &&
             list.map((element, index) => (
               <ItemPress key={index} assets={element.img}>
-                <div className="content-image">
-                  <div className="filter" />
-                </div>
-                <div className="content">
-                  <label>{element.title}</label>
-                  <p>{element.description}</p>
-                  <AboutMore title={more} />
-                </div>
+                <a href={element.link} target="_blank">
+                  <div className="content-image">
+                    <div className="filter" />
+                  </div>
+                  <div className="content">
+                    <label>{element.title}</label>
+                    <p>{element.description}</p>
+                    <AboutMore title={more} />
+                  </div>
+                </a>
               </ItemPress>
             ))
           );

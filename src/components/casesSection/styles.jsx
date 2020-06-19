@@ -146,7 +146,7 @@ export const Cases = styled.div`
     }
     span {
       align-self: start;
-      font-size: 10px;
+      font-size: 12px;
       line-height: 12px;
       color: #ffffff;
       opacity: 0.8;

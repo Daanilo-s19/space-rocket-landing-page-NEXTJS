@@ -32,6 +32,7 @@ export const ItemBlog = styled.div`
   box-sizing: border-box;
   backdrop-filter: blur(20px);
   border-radius: 10px;
+  cursor: pointer;
 
   .tag {
     width: 98px;
