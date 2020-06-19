@@ -3,7 +3,7 @@
     "item": {
       "button": "Comece um Projeto",
       "menu": [
-        { "link": "/homePage", "name": "Início" },
+        { "link": "/HomePage", "name": "Início" },
 
         { "link": "#", "name": "Blog" }
       ]
