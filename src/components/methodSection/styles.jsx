@@ -114,8 +114,31 @@ export const Section = styled.section`
     }
   }
   @media ${({ theme }) => theme.breakpoint.mobileL} {
-    grid-template-columns: 0 360px 0;
-    justify-items: center;
+    .content-main {
+      width: 220px; /*TODO*/
+      height: 220px;
+      background: url("assets/border_dash.svg") 50% 50% no-repeat;
+
+      .circle {
+        /* width: 100%; */
+        max-width: 174px;
+        height: 174px;
+        background: #1b1b34;
+
+        backdrop-filter: blur(10px);
+        border-radius: 50%;
+        animation: spinoff 15s linear infinite;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .play {
+        width: 100%;
+        max-width: 96px;
+        height: 96px;
+      }
+    }
   }
 `;
 

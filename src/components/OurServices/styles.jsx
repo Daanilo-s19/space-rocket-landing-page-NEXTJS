@@ -41,4 +41,9 @@ export const ItemService = styled.div`
     max-width: 296px;
     height: 273px;
   }
+
+  /* @media ${({ theme }) => theme.breakpoint.mobileS} {
+    max-width: 236px;
+    height: 213px;
+  } */
 `;

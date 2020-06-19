@@ -37,10 +37,15 @@ export const Section = styled.section`
     }
   }
   @media ${({ theme }) => theme.breakpoint.tablet} {
-    grid-template-columns: 0 360px 0;
-
+    grid-template-columns: 0 100% 0;
     .content-item {
-      grid-template-columns: 360px;
+      grid-template-columns: 1fr;
+    }
+  }
+  @media ${({ theme }) => theme.breakpoint.mobileS} {
+    grid-template-columns: 0 320px 0;
+    .content-item {
+      grid-template-columns: 320px;
     }
   }
 `;

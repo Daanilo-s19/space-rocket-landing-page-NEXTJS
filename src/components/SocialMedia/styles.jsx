@@ -21,4 +21,12 @@ export const SocialMediaDefault = styled.div`
       border: 1px solid rgba(255, 255, 255, 1);
     }
   }
+
+  @media ${({ theme }) => theme.breakpoint.mobileL} {
+    grid-template-columns: repeat(6, 40px);
+  }
+
+  @media ${({ theme }) => theme.breakpoint.mobileS} {
+    grid-template-columns: repeat(4, 40px);
+  }
 `;

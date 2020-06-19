@@ -85,8 +85,20 @@ export const Section = styled.section`
       }
     }
   }
+  @media ${({ theme }) => theme.breakpoint.modileS}{
 
-  @media ${({ theme }) => theme.breakpoint.mobileL} {
+    .content-item {      
+      .content-alignment-responsive {        
+        grid-template-rows: repeat(3, 84px);
+      }
+    }
+    .content-header {
+      margin: 0 ;
+
+  }
+}
+
+  /* @media ${({ theme }) => theme.breakpoint.mobileL} {
     justify-items: center;
 
     max-width: 375px;
@@ -109,15 +121,19 @@ export const Section = styled.section`
       .content-alignment-responsive {
       }
     }
-  }
+  } */
 `;
 
 export const Item = styled.div`
   width: 96px;
   height: 96px;
-  background: url("assets/Ellipse.svg") bottom border-box no-repeat;
+  background: -webkit-linear-gradient(10.34deg, #552ee5 14.56%, #ee5a59 85.55%);
+  border-radius: 50%;
   animation: spin 5s linear infinite;
   transition: 3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     animation: none;
@@ -128,8 +144,10 @@ export const Item = styled.div`
   }
 
   .circle {
-    width: 100%;
-    height: 100%;
+    background: #1b1b34;
+    border-radius: 50%;
+    width: 94px;
+    height: 94px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -166,5 +184,41 @@ export const Item = styled.div`
     color: #ffffff;
     opacity: 0.8;
     margin-bottom: 20px;
+  }
+
+  @media ${({ theme }) => theme.breakpoint.mobileL} {
+    width: 86px;
+    height: 86px;
+
+    .circle {
+      width: 84px;
+      height: 84px;
+    }
+  }
+  @media ${({ theme }) => theme.breakpoint.mobileS} {
+    width: 66px;
+    height: 66px;
+
+    .circle {
+      width: 64px;
+      height: 64px;
+    }
+
+    #years {
+      font-size: 5px;
+      line-height: 6px;
+    }
+
+    .local {
+      font-size: 5px;
+      line-height: 6px;
+    }
+    .fontSize {
+      font-size: 5 px;
+    }
+    #awards {
+      font-size: 5px;
+      line-height: 6px;
+    }
   }
 `;

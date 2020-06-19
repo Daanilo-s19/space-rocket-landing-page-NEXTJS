@@ -73,6 +73,9 @@ export const AllCases = styled.div`
       ${(props) => !props.pageCases && " display: none;"};
     }
     .description {
+      grid-column: 1/4;
+      grid-row: 1/3;
+      align-self: center;
       width: auto;
       margin: 0;
       text-align: center;

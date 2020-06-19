@@ -114,12 +114,17 @@ export const Footerdefault = styled.div`
         max-width: 296px;
         height: 170px;
       }
+      .content {
+        justify-self: start;
+        justify-items: start;
+      }
     }
+
     .content-menu {
-      justify-self: start;
       display: flex;
       flex-direction: column;
       a {
+        margin: 0;
         margin-bottom: 20px;
       }
     }
