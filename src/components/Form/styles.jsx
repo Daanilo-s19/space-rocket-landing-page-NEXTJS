@@ -12,6 +12,7 @@ export const Container = styled.div`
   -webkit-transition: opacity 100ms ease-in;
   -moz-transition: opacity 100ms ease-in;
   transition: opacity 100ms ease-in;
+  animation: opacityContainer 200ms linear;
 
   display: grid;
   grid-template-columns: 1fr minmax(auto, 571px);

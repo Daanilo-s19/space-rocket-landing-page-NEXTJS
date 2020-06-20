@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function PressSection(props) {
   const { title, subtitle, item, more } = props;
   const [controller, setController] = useState(1);
-  console.log(item);
+
   return (
     <SectionDefault title={title} subtitle={subtitle}>
       {item &&

@@ -5,7 +5,7 @@ export const Container = styled.div`
   height: 100vh;
   position: fixed;
 
-  transition: 1s;
+  animation: opacityContainer 200ms linear;
   top: 0;
   z-index: 999999;
   -webkit-transition: opacity 100ms ease-in;

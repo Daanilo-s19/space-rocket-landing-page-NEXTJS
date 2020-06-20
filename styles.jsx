@@ -91,6 +91,7 @@ export const Container = styled.div`
   background-position: center top;
   background-size: cover;
   background-attachment: fixed;
+  animation: opacityContainer 500ms linear;
 
   .content-center-header {
     display: flex;
@@ -139,6 +140,14 @@ export const Container = styled.div`
     }
     to {
       transform: rotate(0deg);
+    }
+  }
+  @keyframes opacityContainer {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 
