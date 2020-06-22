@@ -12,7 +12,7 @@ export default function Menu(props) {
   return (
     <>
       {!menuDropdown ? (
-        <Navbar>
+        <Navbar data-aos="fade-down">
           <div className="content">
             <div className="content-logo">
               <img src="assets/logo.svg" alt="logan" />

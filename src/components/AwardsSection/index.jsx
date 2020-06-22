@@ -4,13 +4,13 @@ import { Item, Section } from "./styles";
 export default function AwardsSection(props) {
   const { title, subtitle, item } = props;
   return (
-    <Section>
+    <Section data-aos="fade-up">
       <div className="content-header">
         <div className="title">
           <h3>{title}</h3>
           <h4>{subtitle}</h4>
         </div>
-        <div className="border">
+        <div className="border" data-aos="fade-right" data-aos-delay="300">
           <img src="assets/gradient_responsive.svg" alt="gradient responsive" />
         </div>
       </div>

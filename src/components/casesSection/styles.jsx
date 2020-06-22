@@ -92,6 +92,10 @@ export const Cases = styled.div`
   grid-template-columns: repeat(2, 1fr);
   gap: 48px;
 
+  #responsive {
+    display: block;
+  }
+
   .content-image {
     grid-column: ${(props) => (props.order === "true" ? "1/2" : "2/3")};
     grid-row: 1/2;
@@ -155,6 +159,9 @@ export const Cases = styled.div`
   }
 
   @media ${({ theme }) => theme.breakpoint.mobileL} {
+    #responsive {
+      display: none;
+    }
     padding: 0;
     margin: 88px 0;
 

@@ -1,10 +1,17 @@
 import App from "next/app";
 import Head from "next/head";
-import { ThemeProvider } from "styled-components";
-import { GlobalStyle, Container, theme } from "../../styles";
 import I18n from "../lib/i18n";
+import AOS from "aos";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyle, theme } from "../../styles";
+import "aos/dist/aos.css";
 
 export default class MyApp extends App {
+  componentDidMount() {
+    AOS.init({
+      duration: 2000,
+    });
+  }
   render() {
     const { Component, pageProps } = this.props;
     return (

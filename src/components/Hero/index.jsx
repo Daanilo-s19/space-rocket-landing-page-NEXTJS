@@ -9,7 +9,7 @@ export default function Hero(props) {
   const [form, setForm] = useState(false);
   const { title, subtitle, textButton, activeButton } = props;
   return (
-    <Header>
+    <Header data-aos="fade-up">
       <h1>{title}</h1>
       <h2>{subtitle}</h2>
 

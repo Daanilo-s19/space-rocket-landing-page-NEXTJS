@@ -8,11 +8,11 @@ export default function CommentsSection(props) {
   const [controller, setController] = useState(1);
   return (
     <>
-      <div className="content-center-header">
+      <div className="content-center-header" data-aos="fade-up">
         <h3>{title}</h3>
         <h4>{subtitle}</h4>
       </div>
-      <Section>
+      <Section data-aos="zoom-in-up">
         {comments &&
           comments.map((item, index) => {
             return (

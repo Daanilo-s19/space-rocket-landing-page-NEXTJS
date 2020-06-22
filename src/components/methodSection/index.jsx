@@ -9,12 +9,12 @@ export default function MethodSection(props) {
 
   return (
     <>
-      <div className="content-center-header">
+      <div className="content-center-header" data-aos="fade-up">
         <h3>{title}</h3>
         <h4 style={{ maxWidth: "556px" }}>{subtitle}</h4>
       </div>
       <Section>
-        <div className="content">
+        <div className="content" data-aos="zoom-in-up">
           <div className="content-left">
             <MethodItem align="left">
               <div className="content-item">

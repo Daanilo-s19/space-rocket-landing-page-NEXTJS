@@ -17,7 +17,17 @@ export default function CasesSection(props) {
 
       {cases &&
         cases.map((element, index) => (
-          <Cases key={index} order={index % 2 == 0 ? "true" : "false"}>
+          <Cases
+            key={index}
+            order={index % 2 == 0 ? "true" : "false"}
+            data-aos={
+              screen.width > 768
+                ? index % 2 === 0
+                  ? "fade-right"
+                  : "fade-left"
+                : "fade-up"
+            }
+          >
             <div className="content-image">
               <img src={element.img} alt="image case" />
             </div>
@@ -45,7 +55,7 @@ export default function CasesSection(props) {
           </h4>
         </div>
       )}
-      <AllCases pageCases={pageCases}>
+      <AllCases pageCases={pageCases} data-aos="zoom-in-up">
         <div className="project">
           <img src="assets/google_grey.svg" alt="cases" />
         </div>

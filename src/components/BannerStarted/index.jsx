@@ -8,7 +8,7 @@ export default function BannerStarted(props) {
   const [form, setForm] = useState(false);
   return (
     <>
-      <Banner>
+      <Banner data-aos="zoom-in-up">
         <div>
           <h4>{title}</h4>
           <span>{subtitle}</span>

@@ -5,8 +5,8 @@ export default function Footer(props) {
   const { item, designer, tag } = props;
   return (
     <>
-      <BorderTop />
-      <Footerdefault>
+      <BorderTop data-aos="fade-up" />
+      <Footerdefault data-aos="fade-up">
         <div className="header">
           <img id="slogan" src="assets/slogan.svg" alt="slogan" />
           <div className="content">
