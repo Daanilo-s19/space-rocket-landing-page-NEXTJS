@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import axios from "axios";
 import Button from "../Button";
 import { useForm } from "react-hook-form";
 import { Container } from "./styles";
@@ -11,9 +12,28 @@ export default function Form(props) {
   const [price, setPrice] = useState("");
   const [buttonError, setButtonError] = useState(false);
   const onSubmit = (data) => {
-    if (project === "" && price === "") {
+    const lead = {
+      name: data.name,
+      email: data.email,
+      tel: data.tel,
+      company: data.company,
+      detail: data.detail,
+      project,
+      price,
+    };
+    if (project === "" || price === "") {
       setButtonError(true);
-    } else console.log(data);
+    } else {
+      axios
+        .post("http://localhost:3333/contact", lead)
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+    console.log(data);
   };
 
   return (
@@ -100,7 +120,6 @@ export default function Form(props) {
             <input
               placeholder="E-mail Comercial"
               name="email"
-              type="tel"
               className={errors.email && "error"}
               ref={register({ required: true })}
             />
@@ -108,6 +127,7 @@ export default function Form(props) {
             <input
               placeholder="Telefone"
               name="tel"
+              type="tel"
               className={errors.tel && "error"}
               ref={register({ required: true })}
             />
