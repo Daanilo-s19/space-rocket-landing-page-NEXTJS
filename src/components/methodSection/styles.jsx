@@ -18,19 +18,27 @@ export const Section = styled.section`
     width: 100%;
     width: 270px; /*TODO*/
     height: 270px;
-    background: url("assets/border_dash.svg");
-    margin: 0 -50px;
-    animation: spin 15s linear infinite;
 
+    margin: 0 -50px;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 
     &:hover {
       animation-play-state: paused;
-      .circle {
-        animation-play-state: paused;
-      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      animation: spin 15s linear infinite;
+      background: url("assets/border_dash.svg");
+      z-index: -1;
     }
 
     .circle {
@@ -38,33 +46,36 @@ export const Section = styled.section`
       max-width: 224px;
       height: 224px;
       background: #1b1b34;
-
       backdrop-filter: blur(10px);
       border-radius: 50%;
-      animation: spinoff 15s linear infinite;
 
       display: flex;
       justify-content: center;
       align-items: center;
     }
     .play {
+      cursor: pointer;
+      position: relative;
       width: 100%;
       max-width: 96px;
       height: 96px;
-      background: linear-gradient(40.72deg, #552ee5 14.56%, #ee5a59 85.55%);
-      animation: spinoff 10s linear infinite;
-      cursor: pointer;
-
-      img {
-        animation: spin 10s linear infinite;
-      }
-
       box-shadow: 0px 5px 60px rgba(32, 44, 61, 0.1);
-      border-radius: 50%;
-
       display: flex;
       justify-content: center;
       align-items: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background: linear-gradient(40.72deg, #552ee5 14.56%, #ee5a59 85.55%);
+        animation: spinoff 10s linear infinite;
+        border-radius: 50%;
+        z-index: -1;
+      }
 
       &:hover {
         background: linear-gradient(40.72deg, #552ee5 14.56%, #ee5a59 85.55%);
@@ -202,14 +213,21 @@ export const MethodItem = styled.div`
     .border-ellipse {
       width: 60px;
       height: 60px;
-      background: url("assets/Ellipse_sm.svg");
-      animation: rotation 15s linear infinite;
       display: flex;
       justify-content: center;
       align-items: center;
+      position: relative;
 
-      img {
-        animation: antiRotation 15s linear infinite;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background: url("assets/Ellipse_sm.svg");
+        animation: rotation 7s linear infinite;
+        z-index: -1;
       }
     }
   }

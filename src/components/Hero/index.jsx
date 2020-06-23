@@ -9,23 +9,25 @@ export default function Hero(props) {
   const [form, setForm] = useState(false);
   const { title, subtitle, textButton, activeButton } = props;
   return (
-    <Header data-aos="fade-up">
-      <h1>{title}</h1>
-      <h2>{subtitle}</h2>
+    <>
+      <Header data-aos="fade-up">
+        <h1>{title}</h1>
+        <h2>{subtitle}</h2>
 
-      {activeButton && (
-        <Button
-          bgColor="#552ee5"
-          childrenColor="#F0F4FA"
-          shadow={true}
-          bgHover="#3e22a3"
-          onClick={() => setForm(true)}
-        >
-          {textButton}
-        </Button>
-      )}
+        {activeButton && (
+          <Button
+            bgColor="#552ee5"
+            childrenColor="#F0F4FA"
+            shadow={true}
+            bgHover="#3e22a3"
+            onClick={() => setForm(true)}
+          >
+            {textButton}
+          </Button>
+        )}
+      </Header>
       {form && <Form onChange={(value) => setForm(value)} />}
-    </Header>
+    </>
   );
 }
 

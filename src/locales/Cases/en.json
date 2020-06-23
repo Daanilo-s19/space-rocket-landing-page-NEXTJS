@@ -42,5 +42,12 @@
         "description": "Application used as an auxiliary tool to combat dizziness and labyrinthitis. The Dizziness App was created with the purpose of assisting specialists in audiology and speech therapists in the process of treating patients, making them gain resistance to circumstances that cause discomfort. . "
       }
     ]
+  },
+  "footer": {
+    "item": {
+      "tag": "We are hiring",
+      "designer": "Design by Guilherme Cavalcante",
+      "menu": ["Cases", "Services", "About us", "Blog"]
+    }
   }
 }

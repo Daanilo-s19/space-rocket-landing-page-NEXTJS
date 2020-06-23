@@ -69,14 +69,9 @@ export default function CasesSection(props) {
           <img src="assets/google_grey.svg" alt="cases" />
         </div>
         {pageCases && (
-          <>
-            <div className="project">
-              <img src="assets/google_grey.svg" alt="cases" />
-            </div>
-            <div className="project">
-              <img src="assets/google_grey.svg" alt="cases" />
-            </div>
-          </>
+          <div className="project">
+            <img src="assets/google_grey.svg" alt="cases" />
+          </div>
         )}
         {!pageCases && (
           <div className="description">

@@ -29,6 +29,37 @@ export const Container = styled.div`
     box-shadow: 10px 0px 10px rgba(22, 16, 65, 0.3);
   }
 
+  .content-sucess {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      width: 120px;
+      height: 120px;
+      background: #552ee5;
+      box-shadow: 0px 10px 25px rgba(85, 46, 229, 0.32);
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    label {
+      margin: 40px 0 12px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      color: #202c3d;
+    }
+    span {
+      font-size: 14px;
+      line-height: 16px;
+      color: #53647a;
+    }
+  }
+
   .header {
     display: grid;
     grid-template-columns: 4fr 1fr;

@@ -41,5 +41,12 @@
         "description": "Aplicativo utilizado como ferramenta auxiliar no combate da tontura e labirintite. O Dizziness App nasceu com o propósito de auxiliar especialistas em audiologia e fonoaudiologistas no processo de tratamento dos pacientes, fazendo com que os mesmos ganhem resistência a circunstâncias que provoquem desconforto."
       }
     ]
+  },
+  "footer": {
+    "item": {
+      "tag": "Estamos contratando",
+      "designer": "Design por Guilherme Cavalcante",
+      "menu": ["Cases", "Serviços", "Sobre nós", "Blog"]
+    }
   }
 }
