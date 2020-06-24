@@ -92,7 +92,7 @@ export const Container = styled.div`
   background-size: cover;
   background-attachment: fixed;
   animation: opacityContainer 500ms linear;
-  overflow: hidden;
+  /* overflow: hidden; */
 
   .content-center-header {
     display: flex;

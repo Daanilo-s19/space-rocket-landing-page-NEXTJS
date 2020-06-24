@@ -37,7 +37,7 @@ export const Section = styled.section`
       bottom: 0px;
       left: 0px;
       animation: spin 15s linear infinite;
-      background: url("assets/border_dash.svg");
+      background: url("assets/border_dash.svg") 50% 50% no-repeat;
       z-index: -1;
     }
 
@@ -81,6 +81,7 @@ export const Section = styled.section`
         background: linear-gradient(40.72deg, #552ee5 14.56%, #ee5a59 85.55%);
         max-width: 100px;
         height: 100px;
+        border-radius: 50%;
       }
     }
   }
@@ -128,7 +129,7 @@ export const Section = styled.section`
     .content-main {
       width: 220px; /*TODO*/
       height: 220px;
-      background: url("assets/border_dash.svg") 50% 50% no-repeat;
+      /* background: url("assets/border_dash.svg")  */
 
       .circle {
         /* width: 100%; */
@@ -138,7 +139,7 @@ export const Section = styled.section`
 
         backdrop-filter: blur(10px);
         border-radius: 50%;
-        animation: spinoff 15s linear infinite;
+        /* animation: spinoff 15s linear infinite; */
 
         display: flex;
         justify-content: center;

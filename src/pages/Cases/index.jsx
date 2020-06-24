@@ -8,7 +8,7 @@ import { Container } from "../../../styles";
 import en from "../../locales/Cases/en.json";
 import pt from "../../locales/Cases/pt.json";
 
-export default function Home() {
+export default function Cases() {
   const i18n = useI18n();
 
   useEffect(() => {

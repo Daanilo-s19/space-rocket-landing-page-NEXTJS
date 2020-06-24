@@ -1,0 +1,24 @@
+{
+  "menu": {
+    "item": {
+      "button": "Comece um Projeto",
+      "menu": [
+        { "link": "/", "name": "Início" },
+
+        { "link": "https://blog.spacerocket.com.br/", "name": "Blog" }
+      ]
+    }
+  },
+  "bannerStarted": {
+    "title": "Não sabe por onde começar?",
+    "subtitle": "Nós vamos ajudá-lo a descobrir.",
+    "button": "Vamos Conversar"
+  },
+  "footer": {
+    "item": {
+      "tag": "Estamos contratando",
+      "designer": "Design por Guilherme Cavalcante",
+      "menu": ["Cases", "Serviços", "Sobre nós", "Blog"]
+    }
+  }
+}
