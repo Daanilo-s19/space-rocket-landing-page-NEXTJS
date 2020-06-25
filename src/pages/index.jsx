@@ -33,7 +33,7 @@ export default function Home() {
   }, []);
 
   return loading ? (
-    <SplashScreen />
+    <SplashScreen description={i18n.t("homepage.splashScreen")} />
   ) : (
     <>
       <Menu

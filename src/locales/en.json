@@ -1,11 +1,12 @@
 {
   "homepage": {
+    "splashScreen": "loading",
     "menu": {
       "item": {
         "button": "Start a Project",
         "menu": [
           { "link": "/", "name": "Home" },
-
+          { "link": "/About", "name": "About" },
           { "link": "https://blog.spacerocket.com.br/", "name": "Blog" }
         ]
       }

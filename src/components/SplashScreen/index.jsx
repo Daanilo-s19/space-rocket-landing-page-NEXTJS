@@ -1,9 +1,11 @@
 import { useEffect } from "react";
+import PropTypes from "prop-types";
 import { Content } from "./styles";
 import Router from "next/router";
 import SocialMedia from "../SocialMedia";
 
-export default function SplashScreen() {
+export default function SplashScreen(props) {
+  const { description } = props;
   return (
     <>
       <Content>
@@ -12,7 +14,7 @@ export default function SplashScreen() {
         </div>
         <div id="logo">
           <img src="assets/space_rocket_logo_splash.svg" alt="logo splash" />
-          <label>Carregando</label>
+          <label>{description}</label>
           <div className="loading">
             <div id="dot-one"></div>
             <div id="dot-two"></div>
@@ -26,3 +28,6 @@ export default function SplashScreen() {
     </>
   );
 }
+SplashScreen.propTypes = {
+  description: PropTypes.string.isRequired,
+};

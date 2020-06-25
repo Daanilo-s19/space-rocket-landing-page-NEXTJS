@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Menu from "../../components/Menu";
-import Hero from "../../components/Hero";
+import SplashScreen from "../../components/SplashScreen";
 import OurAbout from "../../components/OurAbout";
 import BannerStarted from "../../components/BannerStarted";
 import Footer from "../../components/Footer";
@@ -12,13 +12,23 @@ import pt from "../../locales/About/pt.json";
 export default function Cases() {
   const i18n = useI18n();
 
+  const [loading, setloading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setloading(false);
+    }, 3000);
+  }, []);
+
   useEffect(() => {
     if (navigator.language) {
       i18n.locale("", navigator.language === "pt-BR" ? pt : en);
     } else i18n.locale("", en);
   }, []);
 
-  return (
+  return loading ? (
+    <SplashScreen description={i18n.t("splashScreen")} />
+  ) : (
     <>
       <Menu
         item={{
@@ -28,78 +38,17 @@ export default function Cases() {
       />
       <Container>
         <OurAbout
-          item={[
-            {
-              imgUser: "assets/comments/gloria_canto.jpeg",
-              name: "Gloria",
-              description: " olá mundo",
-            },
-            {
-              imgUser: "assets/comments/gloria_canto.jpeg",
-              name: "1",
-              description: " olá mundo",
-            },
-            {
-              imgUser: "assets/comments/gloria_canto.jpeg",
-              name: "2",
-              description: " olá mundo",
-            },
-            {
-              imgUser: "assets/comments/gloria_canto.jpeg",
-              name: "3",
-              description: " olá mundo",
-            },
-            {
-              imgUser: "assets/comments/gloria_canto.jpeg",
-              name: "4",
-              description: " olá mundo",
-            },
-            {
-              imgUser: "assets/comments/gloria_canto.jpeg",
-              name: "5",
-              description: " olá mundo",
-            },
-            {
-              imgUser: "assets/comments/gloria_canto.jpeg",
-              name: "6",
-              description: " olá mundo",
-            },
-            {
-              imgUser: "assets/comments/gloria_canto.jpeg",
-              name: "Gloria",
-              description: " olá mundo",
-            },
-            {
-              imgUser: "assets/comments/gloria_canto.jpeg",
-              name: "7",
-              description: " olá mundo",
-            },
-            {
-              imgUser: "assets/comments/gloria_canto.jpeg",
-              name: "8",
-              description: " olá mundo",
-            },
-            {
-              imgUser: "assets/comments/gloria_canto.jpeg",
-              name: "9",
-              description: " olá mundo",
-            },
-            {
-              imgUser: "assets/comments/gloria_canto.jpeg",
-              name: "10",
-              description: " olá mundo",
-            },
-            {
-              imgUser: "assets/comments/gloria_canto.jpeg",
-              name: "11",
-              description: " olá mundo",
-            },
-            {
-              imgUser: "assets/comments/gloria_canto.jpeg",
-              name: "12",
-              description: " olá mundo",
-            },
-          ]}
+          description={
+            <>
+              <p>{i18n.t("OurAbout.paragraph.1")}</p>
+              <br />
+              <p>{i18n.t("OurAbout.paragraph.2")}</p>
+              <br />
+              <p>{i18n.t("OurAbout.paragraph.3")}</p>
+              <br />
+            </>
+          }
+          item={i18n.t("OurAbout.user")}
         />
         <BannerStarted
           title={i18n.t("bannerStarted.title")}

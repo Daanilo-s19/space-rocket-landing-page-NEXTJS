@@ -227,6 +227,10 @@ export const Section = styled.section`
       height: 40px;
     }
   }
+  .without-border {
+    border: none;
+    box-shadow: none;
+  }
   .paused {
   }
   @keyframes userAnimation {

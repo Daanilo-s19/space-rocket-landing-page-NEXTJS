@@ -1,5 +1,6 @@
 {
   "homepage": {
+    "splashScreen": "carregando",
     "menu": {
       "item": {
         "button": "Comece um Projeto",
