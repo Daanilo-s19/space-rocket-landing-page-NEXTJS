@@ -99,5 +99,5 @@ export default function OurAbout(props) {
   );
 }
 OurAbout.propTypes = {
-  description: PropTypes.string.isRequired,
+  description: PropTypes.object.isRequired,
 };
