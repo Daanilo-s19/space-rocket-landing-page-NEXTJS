@@ -30,72 +30,72 @@ export default function Cases() {
         <OurAbout
           item={[
             {
-              ImgUser: "assets/comments/gloria_canto.jpeg",
+              imgUser: "assets/comments/gloria_canto.jpeg",
               name: "Gloria",
               description: " olá mundo",
             },
             {
-              ImgUser: "assets/comments/gloria_canto.jpeg",
+              imgUser: "assets/comments/gloria_canto.jpeg",
               name: "1",
               description: " olá mundo",
             },
             {
-              ImgUser: "assets/comments/gloria_canto.jpeg",
+              imgUser: "assets/comments/gloria_canto.jpeg",
               name: "2",
               description: " olá mundo",
             },
             {
-              ImgUser: "assets/comments/gloria_canto.jpeg",
+              imgUser: "assets/comments/gloria_canto.jpeg",
               name: "3",
               description: " olá mundo",
             },
             {
-              ImgUser: "assets/comments/gloria_canto.jpeg",
+              imgUser: "assets/comments/gloria_canto.jpeg",
               name: "4",
               description: " olá mundo",
             },
             {
-              ImgUser: "assets/comments/gloria_canto.jpeg",
+              imgUser: "assets/comments/gloria_canto.jpeg",
               name: "5",
               description: " olá mundo",
             },
             {
-              ImgUser: "assets/comments/gloria_canto.jpeg",
+              imgUser: "assets/comments/gloria_canto.jpeg",
               name: "6",
               description: " olá mundo",
             },
             {
-              ImgUser: "assets/comments/gloria_canto.jpeg",
+              imgUser: "assets/comments/gloria_canto.jpeg",
               name: "Gloria",
               description: " olá mundo",
             },
             {
-              ImgUser: "assets/comments/gloria_canto.jpeg",
+              imgUser: "assets/comments/gloria_canto.jpeg",
               name: "7",
               description: " olá mundo",
             },
             {
-              ImgUser: "assets/comments/gloria_canto.jpeg",
+              imgUser: "assets/comments/gloria_canto.jpeg",
               name: "8",
               description: " olá mundo",
             },
             {
-              ImgUser: "assets/comments/gloria_canto.jpeg",
+              imgUser: "assets/comments/gloria_canto.jpeg",
               name: "9",
               description: " olá mundo",
             },
             {
-              ImgUser: "assets/comments/gloria_canto.jpeg",
+              imgUser: "assets/comments/gloria_canto.jpeg",
               name: "10",
               description: " olá mundo",
             },
             {
-              ImgUser: "assets/comments/gloria_canto.jpeg",
+              imgUser: "assets/comments/gloria_canto.jpeg",
               name: "11",
               description: " olá mundo",
             },
             {
-              ImgUser: "assets/comments/gloria_canto.jpeg",
+              imgUser: "assets/comments/gloria_canto.jpeg",
               name: "12",
               description: " olá mundo",
             },

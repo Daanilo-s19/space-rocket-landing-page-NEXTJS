@@ -44,6 +44,7 @@ export const AllCases = styled.div`
       letter-spacing: 0.12em;
       margin-bottom: 8px;
       text-transform: uppercase;
+      background-clip: text;
       cursor: pointer;
       background: -webkit-linear-gradient(
         10.34deg,

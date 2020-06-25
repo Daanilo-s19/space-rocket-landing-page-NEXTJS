@@ -37,84 +37,78 @@ export const Section = styled.section`
     margin: 0 auto;
     display: grid;
     grid-template-rows: repeat(3, auto);
-    animation: spin 25s linear infinite;
+    animation: spin 120s linear infinite;
+    /* animation: spin 25s linear infinite; */
     border-radius: 51%;
 
     .user {
-      animation: spinoff 25s linear infinite;
+      animation: userAnimation 7500ms linear infinite;
 
-      &:hover {
+      animation-delay: 7500ms;
+      animation-direction: alternate;
+
+      /* &:hover {
+        animation: none;
+      } */
+    }
+
+    &:hover {
+      animation-play-state: paused;
+
+      .orbit-two {
         animation-play-state: paused;
+      }
+      .orbit-three {
+        animation-play-state: paused;
+      }
+      .content {
+        animation-play-state: paused;
+      }
+      .user {
+        animation: none;
       }
     }
   }
 
   .orbit-two {
+    grid-column: 2/3;
+    justify-self: center;
+    align-self: center;
     width: 398px;
     height: 398px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     display: grid;
     grid-template-rows: repeat(3, auto);
     border-radius: 51%;
-    animation: spinoff 120s linear infinite;
+    animation: spin 60s linear infinite;
+    animation-direction: reverse;
+    /* animation: spinoff 20s linear infinite; */
   }
   .orbit-three {
+    grid-column: 2/3;
+    justify-self: center;
+    align-self: center;
     width: 326px;
     height: 326px;
     border: 1px solid rgba(255, 255, 255, 0.25);
     display: grid;
     grid-template-rows: repeat(3, auto);
-    animation: spin 120s linear infinite;
+    animation: spin 30s linear infinite;
+    /* animation: spin 20s linear infinite; */
     border-radius: 51%;
   }
 
-  .top,
-  .bottom {
-    justify-self: center;
-  }
-  .bottom {
-    align-self: end;
-  }
-  .center {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-
-    .right {
-      justify-self: end;
-    }
-  }
-
-  .user {
-    width: 24px;
-    height: 24px;
-
-    margin: -15px;
-    border: 2px solid #ffffff;
-    box-shadow: 0px 4px 20px #202c3d;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-    }
-    &:hover {
-      margin: -20px;
-      width: 40px;
-      height: 40px;
-    }
-  }
-
   .content {
+    grid-column: 2/3;
+    justify-self: center;
+    align-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    animation: spinoff 25s linear infinite;
+    animation: spin 40s linear infinite;
+    animation-direction: reverse;
+    /* animation: spinoff 25s linear infinite; */
 
     .content-main {
       width: 224px;
@@ -155,6 +149,7 @@ export const Section = styled.section`
           margin-bottom: 8px;
           text-transform: uppercase;
           text-align: center;
+          background-clip: text;
           cursor: pointer;
           background: -webkit-linear-gradient(
             18.57deg,
@@ -171,20 +166,83 @@ export const Section = styled.section`
     }
   }
 
-  .paused {
-    animation-play-state: paused;
+  .top {
+    grid-row: 1/2;
+    grid-column: 1/4;
+    justify-self: center;
+  }
 
-    .orbit-two {
-      animation-play-state: paused;
+  .bottom {
+    grid-row: 3/4;
+    grid-column: 1/4;
+    align-self: end;
+    justify-self: center;
+  }
+
+  .left,
+  .right {
+    grid-row: 2/3;
+    align-self: center;
+  }
+  .left {
+    grid-column: 1/2;
+  }
+  .right {
+    justify-self: end;
+    grid-column: 3/4;
+  }
+  /* .center {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+    .right {
+      justify-self: end;
+      grid-column: 3/4;
     }
-    .orbit-three {
-      animation-play-state: paused;
+  } */
+
+  .user {
+    width: 24px;
+    height: 24px;
+
+    margin: -15px;
+    border: 2px solid #ffffff;
+    box-shadow: 0px 4px 20px #202c3d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
     }
-    .content {
-      animation-play-state: paused;
+    &:hover {
+      margin: -20px;
+      width: 40px;
+      height: 40px;
     }
-    .user {
-      animation-play-state: paused;
+  }
+  .paused {
+  }
+  @keyframes userAnimation {
+    from {
+      /* transform: rotate(360deg); */
+      opacity: 1;
     }
+    to {
+      /* transform: rotate(0deg); */
+      opacity: 0;
+    }
+    /* from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    } */
   }
 `;

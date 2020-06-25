@@ -1,7 +1,16 @@
 import { Section } from "./styles";
 import { useState } from "react";
 export default function OurAbout(props) {
-  const [paused, setPaused] = useState(false);
+  const { item } = props;
+
+  const [update, setUpdate] = useState(false);
+
+  const handleUpdate = () => {
+    item.sort(() => Math.random() - 0.5);
+    setTimeout(() => {
+      setUpdate(!update);
+    }, 15000);
+  };
   return (
     <Section>
       <div className="content-header">
@@ -31,119 +40,62 @@ export default function OurAbout(props) {
           <br />
         </div>
       </div>
-      <div className={paused ? "orbit-one  paused" : "orbit-one "}>
-        <div
-          onMouseOver={() => setPaused(true)}
-          onMouseOut={() => setPaused(false)}
-          className="user top"
-        >
-          <img src="assets/comments/gloria_canto.jpeg" />
+      <div className="orbit-one  paused">
+        <div className="user top">
+          <img src={item[1].imgUser} alt="img user" />
         </div>
-        <div className="center">
-          <div
-            onMouseOver={() => setPaused(true)}
-            onMouseOut={() => setPaused(false)}
-            className="user left"
-          >
-            <img src="assets/comments/gloria_canto.jpeg" />
-          </div>
-          <div className="orbit-two">
-            <div
-              onMouseOver={() => setPaused(true)}
-              onMouseOut={() => setPaused(false)}
-              className="user top"
-            >
-              <img src="assets/comments/gloria_canto.jpeg" />
-            </div>
-            <div className="center">
-              <div
-                onMouseOver={() => setPaused(true)}
-                onMouseOut={() => setPaused(false)}
-                className="user left"
-              >
-                <img src="assets/comments/gloria_canto.jpeg" />
-              </div>
-              <div className="orbit-three">
-                <div
-                  onMouseOver={() => setPaused(true)}
-                  onMouseOut={() => setPaused(false)}
-                  className="user top"
-                >
-                  <img src="assets/comments/gloria_canto.jpeg" />
-                </div>
-                <div className="center">
-                  <div
-                    onMouseOver={() => setPaused(true)}
-                    onMouseOut={() => setPaused(false)}
-                    className="user left"
-                  >
-                    <img src="assets/comments/gloria_canto.jpeg" />
-                  </div>
-                  <div className="">
-                    <div className="content">
-                      <div></div>
-                      <div className="content-main">
-                        <div className="circle">
-                          <span>Trabalhe conosco</span>
-                          <img
-                            src="assets/case_more_information.svg"
-                            alt="trabelhe conosco"
-                          />
-                        </div>
-                      </div>
-                      <div></div>
-                    </div>
-                  </div>
-                  <div
-                    onMouseOver={() => setPaused(true)}
-                    onMouseOut={() => setPaused(false)}
-                    className="user right"
-                  >
-                    <img src="assets/comments/gloria_canto.jpeg" />
-                  </div>
-                </div>
-                <div
-                  onMouseOver={() => setPaused(true)}
-                  onMouseOut={() => setPaused(false)}
-                  className="user bottom"
-                >
-                  {" "}
-                  <img src="assets/comments/gloria_canto.jpeg" />
-                </div>
-              </div>
-              <div
-                onMouseOver={() => setPaused(true)}
-                onMouseOut={() => setPaused(false)}
-                className="user right"
-              >
-                {" "}
-                <img src="assets/comments/gloria_canto.jpeg" />
-              </div>
-            </div>
-            <div
-              onMouseOver={() => setPaused(true)}
-              onMouseOut={() => setPaused(false)}
-              className="user bottom"
-            >
-              <img src="assets/comments/gloria_canto.jpeg" />
-            </div>
-          </div>
-          <div
-            onMouseOver={() => setPaused(true)}
-            onMouseOut={() => setPaused(false)}
-            className="user right"
-          >
-            <img src="assets/comments/gloria_canto.jpeg" />
-          </div>
+        <div className="user left">
+          <img src={item[2].imgUser} alt="img user" />
         </div>
-        <div
-          onMouseOver={() => setPaused(true)}
-          onMouseOut={() => setPaused(false)}
-          className="user bottom"
-        >
-          <img src="assets/comments/gloria_canto.jpeg" />
+        <div className="user right">
+          <img src={item[3].imgUser} alt="img user" />
+        </div>
+        <div className="user bottom">
+          <img src={item[4].imgUser} alt="img user" />
+        </div>
+        <div className="orbit-two">
+          <div className="user top">
+            <img src={item[5].imgUser} alt="img user" />
+          </div>
+          <div className="user left">
+            <img src={item[6].imgUser} alt="img user" />
+          </div>
+          <div className="user right">
+            <img src={item[7].imgUser} alt="img user" />
+          </div>
+          <div className="user bottom">
+            <img src={item[8].imgUser} alt="img user" />
+          </div>
+          <div className="orbit-three">
+            <div className="user top">
+              <img src={item[9].imgUser} alt="img user" />
+            </div>
+            <div className="user left">
+              <img src={item[10].imgUser} alt="img user" />
+            </div>
+            <div className="user right">
+              <img src={item[11].imgUser} alt="img user" />
+            </div>
+            <div className="user bottom">
+              <img src={item[12].imgUser} alt="img user" />
+            </div>
+            <div className="content">
+              <div></div>
+              <div className="content-main">
+                <div className="circle">
+                  <span>Trabalhe conosco</span>
+                  <img
+                    src="assets/case_more_information.svg"
+                    alt="trabelhe conosco"
+                  />
+                </div>
+              </div>
+              <div></div>
+            </div>
+          </div>
         </div>
       </div>
+      {handleUpdate()}
     </Section>
   );
 }
