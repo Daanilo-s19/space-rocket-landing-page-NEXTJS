@@ -10,6 +10,7 @@ import CommentsSection from "../components/CommentsSection";
 import PressSection from "../components/OurPress";
 import BlogSection from "../components/OurBlog";
 import BannerStarted from "../components/BannerStarted";
+import Form from "../components/Form";
 import Footer from "../components/Footer";
 import useI18n from "../hooks/use-i18n";
 import { Container } from "../../styles";
@@ -19,6 +20,7 @@ import pt from "../locales/pt.json";
 export default function Home() {
   const i18n = useI18n();
   const [loading, setloading] = useState(true);
+  const [form, setForm] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -41,13 +43,16 @@ export default function Home() {
           button: i18n.t("homepage.menu.item.button"),
           menu: i18n.t("homepage.menu.item.menu"),
         }}
+        onChange={(value) => setForm(value)}
       />
+      {form && <Form onChange={(value) => setForm(value)} />}
       <Container>
         <Hero
           activeButton={true}
           title={i18n.t("homepage.hero.title")}
           subtitle={i18n.t("homepage.hero.subtitle")}
           textButton={i18n.t("homepage.hero.button")}
+          onChange={(value) => setForm(value)}
         />
         <AwardsSection
           title={i18n.t("homepage.awardsSection.title")}
@@ -127,6 +132,7 @@ export default function Home() {
           title={i18n.t("homepage.bannerStarted.title")}
           subtitle={i18n.t("homepage.bannerStarted.subtitle")}
           button={i18n.t("homepage.bannerStarted.button")}
+          onChange={(value) => setForm(value)}
         />
       </Container>
       <Footer item={i18n.t("homepage.footer.item")} />

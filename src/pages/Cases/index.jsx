@@ -1,6 +1,7 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Menu from "../../components/Menu";
 import Hero from "../../components/Hero";
+import Form from "../../components/Form";
 import CasesSection from "../../components/casesSection";
 import Footer from "../../components/Footer";
 import useI18n from "../../hooks/use-i18n";
@@ -10,6 +11,7 @@ import pt from "../../locales/Cases/pt.json";
 
 export default function Cases() {
   const i18n = useI18n();
+  const [form, setForm] = useState(false);
 
   useEffect(() => {
     if (navigator.language) {
@@ -24,13 +26,16 @@ export default function Cases() {
           button: i18n.t("menu.item.button"),
           menu: i18n.t("menu.item.menu"),
         }}
+        onChange={(value) => setForm(value)}
       />
+      {form && <Form onChange={(value) => setForm(value)} />}
       <Container>
         <Hero
           activeButton={false}
           title={i18n.t("hero.title")}
           subtitle={i18n.t("hero.subtitle")}
           textButton={i18n.t("hero.button")}
+          onChange={(value) => setForm(value)}
         />
 
         <CasesSection

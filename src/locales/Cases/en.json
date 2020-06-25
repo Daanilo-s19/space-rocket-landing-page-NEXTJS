@@ -4,7 +4,7 @@
       "button": "Comece um Projeto",
       "menu": [
         { "link": "/", "name": "Início" },
-
+        { "link": "/About", "name": "About" },
         { "link": "https://blog.spacerocket.com.br/", "name": "Blog" }
       ]
     }

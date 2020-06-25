@@ -1,8 +1,10 @@
 import PropTypes from "prop-types";
+import axios from "axios";
 import Button from "../Button";
 import { useForm } from "react-hook-form";
 import { Container } from "./styles";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 export default function Form(props) {
   const { onChange } = props;
@@ -10,16 +12,55 @@ export default function Form(props) {
   const [project, setProject] = useState("");
   const [price, setPrice] = useState("");
   const [buttonError, setButtonError] = useState(false);
+  const [apiError, setApiError] = useState(false);
   const [sendSuccess, setSendSuccess] = useState(false);
 
   const onSubmit = (data) => {
     if (project === "" || price === "") {
       setButtonError(true);
     } else {
-      setSendSuccess(true);
-      console.log(data);
+      sendEmail(data);
     }
   };
+
+  async function sendEmail({ detail, company, name, email, tel }) {
+    const send = {
+      text: `Projeto: ${project} - Investimento: ${price} \nDescrição:${detail}\n
+      Empresa:${company}\n
+      lead:${name}\n
+      email:${email}\n
+      telefone:${tel}\n`,
+      view: `gmail`,
+      html: `<h2>Projeto: ${project} - Investimento: ${price}</h2><br/>
+         <p><b>Descrição:</b>${detail}</p><br/>
+         <label><b>Empresa:</b>${company}</label><br/>
+         <label><b>lead:</b>${name}</label><br/>
+         <label><b>email:</b>${email}</label><br/>
+         <label><b>telefone:</b>${tel}</label> <br/>`,
+      subject: `lead: ${name} - Empresa: ${company}`,
+    };
+
+    try {
+      await axios.post("https://api.spacerocket.com.br/email", send);
+
+      setSendSuccess(true);
+    } catch (error) {
+      toast.warn(
+        "Erro inesperado! entre em contato conosco pelo nosso email: oi@spacerocket.com.br ",
+        {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        }
+      );
+      setApiError(true);
+      console.error(error);
+    }
+  }
 
   return (
     <Container>
@@ -45,8 +86,15 @@ export default function Form(props) {
               <img src="assets/send_success.svg" />
             </div>
 
-            <label>Orçamento enviado!</label>
-            <span>Te retornamos em até 72 horas.</span>
+            <label>
+              {apiError ? "Erro inesperado!" : "Orçamento enviado!"}
+            </label>
+            <span>
+              {" "}
+              {apiError
+                ? "entre em contato conosco pelo nosso email: oi@spacerocket.com.br"
+                : "Te retornamos em até 72 horas."}
+            </span>
           </div>
         ) : (
           <>
@@ -120,16 +168,23 @@ export default function Form(props) {
                 <input
                   placeholder="E-mail Comercial"
                   name="email"
-                  type="tel"
+                  type="email"
                   className={errors.email && "error"}
-                  ref={register({ required: true })}
+                  ref={register({
+                    required: true,
+                  })}
                 />
 
                 <input
                   placeholder="Telefone"
                   name="tel"
+                  type="tel"
                   className={errors.tel && "error"}
-                  ref={register({ required: true })}
+                  ref={register({
+                    required: true,
+                    minLength: 6,
+                    maxLength: 12,
+                  })}
                 />
               </div>
               <input

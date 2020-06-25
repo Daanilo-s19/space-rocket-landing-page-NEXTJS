@@ -4,7 +4,9 @@ import I18n from "../lib/i18n";
 import AOS from "aos";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle, theme } from "../../styles";
+import { ToastContainer } from "react-toastify";
 import "aos/dist/aos.css";
+import "react-toastify/dist/ReactToastify.css";
 
 export default class MyApp extends App {
   componentDidMount() {
@@ -30,6 +32,7 @@ export default class MyApp extends App {
           ></meta>
         </Head>
         <GlobalStyle />
+        <ToastContainer />
         <I18n lngDict={pageProps.lngDict} locale={pageProps.lng}>
           <Component {...pageProps} />
         </I18n>

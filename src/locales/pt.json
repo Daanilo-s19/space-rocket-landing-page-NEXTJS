@@ -6,7 +6,7 @@
         "button": "Comece um Projeto",
         "menu": [
           { "link": "/", "name": "Início" },
-          { "link": "/About", "name": "Sobre nós" },
+          { "link": "/About", "name": "Sobre Nós" },
           { "link": "https://blog.spacerocket.com.br/", "name": "Blog" }
         ]
       }
@@ -123,7 +123,7 @@
       "subtitle": "Feedback dos nossos clientes",
       "item": [
         {
-          "imageUser": "assets/user_default.svg",
+          "imageUser": "assets/comments/nilson.jpg",
           "name": "Nilson",
           "role": "(Médico Nutrologista) - Data And Nutrition",
           "comments": "Gosto sempre de trabalhar com a turma. Sempre fazem um bom trabalho e as coisas funcionam bem."

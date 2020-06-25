@@ -1,13 +1,9 @@
 import Button from "../Button";
-import Form from "../Form";
 import PropTypes from "prop-types";
 import { Header } from "./styles";
-import { useState } from "react";
-import { bool } from "yup";
 
 export default function Hero(props) {
-  const [form, setForm] = useState(false);
-  const { title, subtitle, textButton, activeButton } = props;
+  const { title, subtitle, textButton, activeButton, onChange } = props;
   return (
     <>
       <Header data-aos="fade-up">
@@ -20,13 +16,12 @@ export default function Hero(props) {
             childrenColor="#F0F4FA"
             shadow={true}
             bgHover="#3e22a3"
-            onClick={() => setForm(true)}
+            onClick={() => onChange(true)}
           >
             {textButton}
           </Button>
         )}
       </Header>
-      {form && <Form onChange={(value) => setForm(value)} />}
     </>
   );
 }
@@ -36,4 +31,5 @@ Hero.propTypes = {
   subtitle: PropTypes.string.isRequired,
   textButton: PropTypes.string.isRequired,
   activeButton: PropTypes.bool.isRequired,
+  onChange: PropTypes.func.isRequired,
 };

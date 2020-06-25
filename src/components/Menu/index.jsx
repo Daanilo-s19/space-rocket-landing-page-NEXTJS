@@ -6,9 +6,9 @@ import PropTypes from "prop-types";
 import { Navbar, Dropdown } from "./styles";
 
 export default function Menu(props) {
-  const { item } = props;
+  const { item, onChange } = props;
   const [menuDropdown, setMenuDropdown] = useState(false);
-  const [form, setForm] = useState(false);
+
   return (
     <>
       {!menuDropdown ? (
@@ -24,7 +24,7 @@ export default function Menu(props) {
                     {item.name}
                   </a>
                 ))}
-              <Button onClick={() => setForm(true)} bgHover="#552ee5">
+              <Button onClick={() => onChange(true)} bgHover="#552ee5">
                 {item.button}
               </Button>
             </div>
@@ -62,17 +62,17 @@ export default function Menu(props) {
               childrenColor="#F0F4FA"
               shadow={true}
               bgHover="#3e22a3"
-              onClick={() => setForm(true)}
+              onClick={() => onChange(true)}
             >
               {item.button}
             </Button>
           </div>
         </Dropdown>
       )}
-      {form && <Form onChange={(value) => setForm(value)} />}
     </>
   );
 }
 Menu.propTypes = {
   item: PropTypes.object.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
