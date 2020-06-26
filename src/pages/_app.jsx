@@ -20,12 +20,17 @@ export default class MyApp extends App {
       <ThemeProvider theme={theme}>
         <Head>
           <title>Space Rocket</title>
+
           <link rel="icon" href="/favicon_space.svg" />
           <link
             rel="stylesheet"
             type="text/css"
             href="../src/fonts/stylesheet.css"
           ></link>
+          <meta
+            name="description"
+            content="Space rocket.Criamos, desenvolvemos e gerenciamos produtos digitais."
+          ></meta>
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
